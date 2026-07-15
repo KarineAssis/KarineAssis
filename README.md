@@ -13,11 +13,11 @@
 
 ## Sobre mim
 
-Sou engenheira mecânica com trajetória construída na interseção entre **operações, processos, tecnologia e dados**. Ao longo de mais de dez anos em ambientes industriais, atuei com planejamento e controle da manutenção, melhoria contínua, indicadores de desempenho e iniciativas de transformação digital em contexto corporativo e internacional.
+Sou engenheira mecânica e profissional de projetos e transformação digital, com mais de dez anos de experiência em ambientes operacionais complexos. Minha trajetória foi construída na conexão entre **negócio, processos, tecnologia e dados**, com atuação em planejamento e controle da manutenção, melhoria contínua, gestão de indicadores, projetos corporativos e iniciativas de inovação.
 
-Meu trabalho é transformar problemas operacionais complexos em estruturas mais claras: processos mapeados, requisitos bem definidos, indicadores úteis e soluções que possam ser adotadas pelas equipes.
+Tenho experiência em estruturar problemas, mapear processos, traduzir necessidades operacionais em requisitos funcionais, conduzir pilotos, coordenar stakeholders multifuncionais e transformar dados de desempenho em informações úteis para decisão.
 
-> **Mechanical engineer with 10+ years of experience connecting operations, business analysis, data and digital transformation across Latin America and Germany.**
+> **Mechanical engineer and transformation professional with 10+ years of experience connecting operations, business analysis, processes and data in LATAM environments, complemented by international experience in Germany.**
 
 ---
 
@@ -25,11 +25,11 @@ Meu trabalho é transformar problemas operacionais complexos em estruturas mais 
 
 | | |
 |---|---|
-| **Formação** | Engenharia Mecânica · MBA em Gestão da Manutenção |
-| **Experiência** | 10+ anos em manutenção industrial, PCM, processos e transformação digital |
-| **Atuação internacional** | Brasil, Equador, Argentina e Alemanha |
-| **Principal diferencial** | Traduzir a realidade operacional em requisitos, indicadores e soluções digitais |
-| **Idiomas** | Português nativo · Inglês avançado · Espanhol fluente · Alemão A2 |
+| **Formação** | Engenharia Mecânica · MBA em Gestão da Manutenção · Programa Profissional em Data Science em andamento |
+| **Experiência** | 10+ anos em manutenção industrial, PCM, projetos, processos e transformação digital |
+| **Contexto internacional** | Projetos corporativos em Brasil, Equador e Argentina · Vivência na Alemanha entre 2023 e 2025 |
+| **Principal diferencial** | Traduzir a realidade operacional em requisitos, indicadores e soluções que possam ser adotadas pelas equipes |
+| **Idiomas** | Português nativo · Inglês C1 · Espanhol C1 · Alemão A2 |
 
 ---
 
@@ -59,12 +59,12 @@ Meu trabalho é transformar problemas operacionais complexos em estruturas mais 
 </td>
 <td width="33%" valign="top">
 
-### Digital Transformation
+### Projects & Digital Transformation
 
+- Estruturação e acompanhamento de projetos
 - Priorização de funcionalidades
 - Testes, piloto e rollout
 - Gestão da mudança e adoção
-- Evolução de soluções a partir do uso real
 
 </td>
 </tr>
@@ -112,17 +112,21 @@ Atuação em planejamento e controle da manutenção, manutenção preditiva, pl
 
 ### Projetos corporativos e contexto LATAM
 
-Experiência conectando necessidades de diferentes unidades e equipes, com atuação em ambientes do Brasil, Equador e Argentina e interface entre operação, gestão e tecnologia.
+Experiência conectando necessidades de diferentes unidades e equipes, com atuação em ambientes do Brasil, Equador e Argentina e interface entre operação, liderança e tecnologia.
 
-### Experiência internacional
+### Vivência internacional na Alemanha
 
-Atuação técnico-comercial na Alemanha, com análise de viabilidade, ROI, relacionamento com clientes e tradução de necessidades operacionais em propostas de solução.
+Entre 2023 e 2025, vivi na Alemanha e desenvolvi uma experiência internacional marcada por adaptação cultural, comunicação em ambientes multiculturais, aprendizado do idioma alemão e contato direto com uma nova realidade social e profissional.
 
 ---
 
 ## Competências e ferramentas
 
-`Power BI` · `Excel` · `Power Query` · `DAX` · `KPIs` · `Análise de Processos` · `Business Analysis` · `Requisitos Funcionais` · `PCM` · `Melhoria Contínua` · `Product Delivery` · `Testes Funcionais` · `Gestão da Mudança` · `Data Storytelling`
+`Power BI` · `Excel` · `Power Query` · `DAX` · `KPIs` · `Análise de Processos` · `Business Analysis` · `Requisitos Funcionais` · `Gestão de Projetos` · `Gestão de Stakeholders` · `PCM` · `Melhoria Contínua` · `Product Delivery` · `Testes Funcionais` · `Gestão da Mudança` · `Data Storytelling`
+
+### Em desenvolvimento
+
+`Data Science` · `SQL` · `Python` · `Microsoft Fabric` · `IA aplicada aos negócios`
 
 ---
 
@@ -138,7 +142,7 @@ Atuação técnico-comercial na Alemanha, com análise de viabilidade, ROI, rela
 
 ## Foco atual
 
-Estou desenvolvendo um portfólio voltado a **Business Analytics, Product Analytics, Excelência Operacional e Transformação Digital**, reunindo casos que demonstram minha capacidade de estruturar problemas, analisar processos, definir indicadores e conectar operação a soluções baseadas em dados.
+Estou desenvolvendo um portfólio voltado a **Business Analytics, Projetos de Inovação, Product Analytics, Excelência Operacional e Transformação Digital**, reunindo casos que demonstram minha capacidade de estruturar problemas, analisar processos, definir indicadores, coordenar entregas e conectar operação a soluções baseadas em dados.
 
 <div align="center">
   <br>
