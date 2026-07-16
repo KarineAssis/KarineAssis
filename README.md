@@ -1,6 +1,8 @@
-# Karine de Assis
+<div align="center">
+  <img src="assets/profile-banner.svg" alt="Karine de Assis — Business Analytics, Operational Excellence e Digital Transformation" width="100%">
+</div>
 
-**Business Analytics | Operational Excellence | Digital Transformation**
+<br>
 
 Engenheira mecânica com mais de dez anos de experiência em manutenção industrial, planejamento e controle da manutenção, melhoria contínua, indicadores de desempenho e projetos de transformação digital.
 
