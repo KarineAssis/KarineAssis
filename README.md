@@ -24,6 +24,10 @@ Atuo na conexão entre operação, processos, tecnologia e dados. Minha experiê
 
 ### [SIM Mobile](https://github.com/KarineAssis/sim-mobile-case-study)
 
+<a href="https://github.com/KarineAssis/sim-mobile-case-study">
+  <img src="https://raw.githubusercontent.com/KarineAssis/sim-mobile-case-study/main/assets/project-cover.svg" alt="SIM Mobile — Do registro tardio à operação conectada" width="100%">
+</a>
+
 Case de transformação digital em manutenção industrial. O projeto levou atividades do sistema corporativo para dispositivos móveis, aproximando o registro das informações do local de execução do trabalho.
 
 **Minha atuação:** condução pelo lado do negócio, requisitos funcionais, alinhamento com TI, testes, piloto, treinamento e apoio à implantação.
