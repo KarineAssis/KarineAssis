@@ -25,7 +25,26 @@ Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KP
 
 **Pergunta de negócio → entendimento dos dados → tratamento e validação → modelagem e métricas → visualização → insights → recomendação → decisão**
 
-## Projeto em destaque
+## Projetos selecionados
+
+### [Delivery Reliability - Logistics Analytics](projects/delivery-reliability/README.md)
+
+<a href="projects/delivery-reliability/README.md">
+  <img src="assets/delivery-reliability-preview.svg" alt="Delivery Reliability - análise de desempenho logístico em Power BI" width="100%">
+</a>
+
+Case de análise de dados logísticos construído para identificar onde os atrasos estão concentrados e apoiar a priorização operacional com base em volume, taxa de atraso e impacto.
+
+**Escopo atual:** auditoria no Excel, tratamento no Power Query, modelagem dimensional, medidas DAX, análise temporal e dashboard executivo em Power BI.
+
+- 53.770 entregas analisadas
+- 87,02% de cumprimento do prazo
+- 12,98% de taxa de atraso
+- 2,84 dias de lead time médio
+
+> Projeto em desenvolvimento. As próximas etapas incluirão aprofundamento analítico, SQL, Python, Pareto e ranking de prioridade.
+
+[Ver a construção do case](projects/delivery-reliability/README.md)
 
 ### [SIM Mobile - Data Capture & Operational Analytics](https://github.com/KarineAssis/sim-mobile-case-study)
 
