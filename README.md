@@ -1,75 +1,90 @@
 <div align="center">
-  <img src="assets/profile-banner.svg" alt="Karine de Assis — Business Analytics, Operational Excellence e Digital Transformation" width="100%">
+  <img src="assets/profile-banner.svg" alt="Karine de Assis - Data Analytics, Power BI, Business Analytics and Data Storytelling" width="100%">
 </div>
 
 <br>
 
-Engenheira mecânica com mais de dez anos de experiência em manutenção industrial, planejamento e controle da manutenção, melhoria contínua, indicadores de desempenho e projetos de transformação digital.
+Profissional de **Data Analytics** com mais de 10 anos de experiência transformando dados operacionais em indicadores, análises de desempenho e recomendações para apoiar decisões em ambientes complexos.
 
-Atuo na conexão entre operação, processos, tecnologia e dados. Minha experiência inclui mapeamento de processos, levantamento de requisitos, definição de indicadores, testes funcionais, implantação de soluções e apoio à tomada de decisão.
+Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KPIs, visualização de dados e conhecimento de negócio**. Atuo na tradução de perguntas operacionais em métricas, dashboards, diagnósticos e recomendações acionáveis, conectando áreas de negócio, liderança e tecnologia.
 
-*Mechanical engineer with 10+ years of experience in operations, process improvement, business analysis and digital transformation across Latin American environments.*
+*Data Analytics professional with 10+ years of experience turning operational data into performance indicators, business insights and actionable recommendations.*
 
-## Áreas de atuação
+## Competências em Data Analytics
 
-- Business Analysis e levantamento de requisitos
-- Análise de processos e melhoria contínua
-- KPIs e análise de desempenho operacional
+- Análise de dados e Business Analytics
 - Power BI, Excel, Power Query e DAX
-- Gestão de projetos e stakeholders
-- Testes funcionais, pilotos e implantação
-- Gestão da mudança e adoção de soluções
+- Definição, governança e análise de KPIs
+- Visualização de dados e Data Storytelling
+- Análise de desempenho, tendências, desvios e causas
+- Tradução de necessidades de negócio em métricas e requisitos
+- Qualidade de dados e padronização de informações
+- Gestão de stakeholders e comunicação executiva
+
+## Como estruturo uma análise
+
+**Pergunta de negócio → entendimento dos dados → tratamento e validação → modelagem e métricas → visualização → insights → recomendação → decisão**
 
 ## Projeto em destaque
 
-### [SIM Mobile](https://github.com/KarineAssis/sim-mobile-case-study)
+### [SIM Mobile - Data Capture & Operational Analytics](https://github.com/KarineAssis/sim-mobile-case-study)
 
 <a href="https://github.com/KarineAssis/sim-mobile-case-study">
-  <img src="https://raw.githubusercontent.com/KarineAssis/sim-mobile-case-study/main/assets/project-cover.svg" alt="SIM Mobile — Do registro tardio à operação conectada" width="100%">
+  <img src="https://raw.githubusercontent.com/KarineAssis/sim-mobile-case-study/main/assets/project-cover.svg" alt="SIM Mobile - Data capture, data quality and operational analytics" width="100%">
 </a>
 
-Case de transformação digital em manutenção industrial. O projeto levou atividades do sistema corporativo para dispositivos móveis, aproximando o registro das informações do local de execução do trabalho.
+Case que demonstra como um problema de captura de dados afetava a qualidade das informações operacionais. A iniciativa aproximou o registro do local de execução e criou uma base mais favorável para análises confiáveis e tomada de decisão.
 
-**Minha atuação:** condução pelo lado do negócio, requisitos funcionais, alinhamento com TI, testes, piloto, treinamento e apoio à implantação.
+**Minha atuação:** diagnóstico do processo, jornada do usuário, requisitos funcionais, alinhamento com TI, testes, piloto, implantação, acompanhamento da adoção e definição de oportunidades analíticas.
 
 - 5+ fluxos mobile disponibilizados
 - 148 usuários habilitados até outubro de 2022
 - 3 unidades brasileiras acompanhadas
 - implantação iniciada em 2021
 
+> Usuários habilitados não equivalem necessariamente a usuários ativos. O case explicita as limitações dos dados e evita atribuir resultados não comprovados.
+
 [Ver o repositório do projeto](https://github.com/KarineAssis/sim-mobile-case-study)
 
-## Experiência profissional
+## Experiência aplicada ao negócio
 
-### Operações e manutenção industrial
+### Analytics e performance operacional
 
-Experiência em PCM, manutenção preditiva, planos de inspeção, lubrificação, gestão de sobressalentes, disponibilidade, MTTR e melhoria dos processos de execução e registro.
+Experiência com indicadores de disponibilidade, MTTR, backlog, manutenção preventiva e preditiva, custos, planejamento e execução. Atuação com dashboards, reporting executivo, análise de tendências, identificação de desvios e priorização de ações.
 
 ### Projetos corporativos e atuação LATAM
 
-Participação em iniciativas envolvendo unidades do Brasil, Equador e Argentina, com interface entre operação, liderança e tecnologia.
+Participação em iniciativas envolvendo unidades do Brasil, Equador e Argentina, conectando dados, processos, operação, liderança e tecnologia.
 
-### Vivência internacional
+### Transformação digital e melhoria contínua
 
-Residência na Alemanha entre 2023 e 2025, com adaptação a ambiente multicultural, desenvolvimento do idioma alemão e contato com uma nova realidade social e profissional.
+Experiência em mapeamento de processos, requisitos funcionais, testes, pilotos, implantação, gestão da mudança, PDCA, Kaizen e análise de causas.
 
 ## Ferramentas e métodos
 
-`Power BI` · `Excel` · `Power Query` · `DAX` · `KPIs` · `Análise de Processos` · `Business Analysis` · `Requisitos Funcionais` · `Gestão de Projetos` · `Gestão de Stakeholders` · `PCM` · `Melhoria Contínua` · `Testes Funcionais` · `Gestão da Mudança` · `Data Storytelling`
+### Aplicação prática
+
+`Power BI` · `Excel` · `Power Query` · `DAX` · `KPIs` · `Data Visualization` · `Data Storytelling` · `Business Analytics` · `Análise de Processos` · `Requisitos Funcionais`
+
+### Em desenvolvimento
+
+`SQL` · `Python` · `Microsoft Fabric` · `Data Science`
+
+### IA aplicada à produtividade analítica
+
+`ChatGPT` · `Claude` · `Microsoft Copilot`
+
+Uso para exploração de hipóteses, síntese de informações, documentação, estruturação de análises e comunicação executiva.
 
 ## Formação e idiomas
 
-- Engenharia Mecânica
-- MBA em Gestão da Manutenção
-- Programa Profissional em Data Science em andamento
+- Engenharia Mecânica - UFRN
+- MBA em Gestão da Manutenção - IPOG
+- Programa Profissional em Data Science - em andamento
 - Português nativo
 - Inglês C1
 - Espanhol C1
 - Alemão A2
-
-## Em desenvolvimento
-
-`Data Science` · `SQL` · `Python` · `Microsoft Fabric` · `Inteligência Artificial aplicada a negócios`
 
 ## Contato
 
