@@ -6,7 +6,13 @@
   <img src="../../assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
 </div>
 
-> Projeto em desenvolvimento. Todos os dados são sintéticos e foram criados para fins educacionais.
+> Todos os dados são sintéticos e foram criados para fins educacionais.
+
+<div align="center">
+  <a href="files/Logistics_Customer_Experience_Analytics_FINAL.pbix">
+    <img src="https://img.shields.io/badge/Baixar%20relatório-Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=000" alt="Baixar relatório Power BI">
+  </a>
+</div>
 
 ## Contexto do problema
 
@@ -47,12 +53,18 @@ A base foi gerada programaticamente para criar um cenário plausível de anális
 
 ## Indicadores principais
 
-| Indicador | Resultado preliminar |
+| Indicador | Resultado |
 |---|---:|
 | Entregas analisadas | 53.770 |
 | Cumprimento do prazo | 87,02% |
 | Taxa de atraso | 12,98% |
 | Satisfação do cliente | 64,02% |
+
+## Dashboard final
+
+<div align="center">
+  <img src="../../assets/logistics-customer-experience-dashboard.png" alt="Dashboard Logistics Customer Experience Analytics" width="100%">
+</div>
 
 ## Como construí a solução
 
@@ -141,7 +153,7 @@ Depois de validar os cálculos, organizei a página para conduzir a leitura do c
 
 Essa sequência permite começar pelo desempenho logístico, avançar para os principais problemas relatados e terminar mostrando como o atraso se relaciona com a satisfação do cliente.
 
-Na apresentação final, vou destacar apenas as três conclusões mais relevantes, mantendo a explicação objetiva.
+A apresentação destaca apenas as três conclusões mais relevantes, mantendo a explicação objetiva.
 
 ## Documentação complementar
 
