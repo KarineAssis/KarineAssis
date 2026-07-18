@@ -27,25 +27,24 @@ Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KP
 
 ## Projetos selecionados
 
-### [Customer Experience Performance Analytics](projects/customer-experience-performance-analytics/README.md)
+### [Logistics Customer Experience Analytics](projects/customer-experience-performance-analytics/README.md)
 
 <a href="projects/customer-experience-performance-analytics/README.md">
-  <img src="assets/customer-experience-performance-preview.svg" alt="Customer Experience Performance Analytics" width="100%">
+  <img src="assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
 </a>
 
-Case de análise integrada entre desempenho operacional, atendimento e experiência do cliente em uma operação de delivery.
+Case de uma empresa de logística com problemas de atraso e impacto na experiência do cliente.
 
-O projeto busca responder como atrasos, motivos de contato, resolução, recontato, escalonamento e complexidade influenciam CSAT, DSAT, AHT e FCR — e como transformar esses resultados em prioridades de negócio.
+O projeto conecta dados de entregas e registros de contato para identificar onde os atrasos estão concentrados, quais motivos aparecem com maior frequência e como o desempenho logístico afeta a satisfação.
 
-**Escopo atual:** base sintética, Power Query, modelo dimensional, medidas DAX, análise de CSAT/DSAT/AHT/FCR, ranking e quartis de performance.
+**Foco técnico:** Power BI, Power Query, modelo dimensional, DAX, visualização e comunicação executiva.
 
-- 16.318 interações analisadas
-- 64,02% de CSAT
-- 9,90% de DSAT
-- 57,76% de FCR
-- 12,09 minutos de AHT médio
+- 53.770 entregas analisadas
+- 87,02% de cumprimento do prazo
+- 12,98% de taxa de atraso
+- 64,02% de satisfação do cliente
 
-> Projeto em desenvolvimento. SQL, Python, cinco insights principais e recomendações serão adicionados nas próximas etapas.
+> Projeto em desenvolvimento. A apresentação final terá apenas três insights e recomendações objetivas.
 
 [Ver a construção do case](projects/customer-experience-performance-analytics/README.md)
 
