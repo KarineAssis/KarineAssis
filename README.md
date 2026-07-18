@@ -39,14 +39,16 @@ O projeto conecta dados de entregas e registros de contato para identificar onde
 
 **Foco técnico:** Power BI, Power Query, modelo dimensional, DAX, visualização e comunicação executiva.
 
+**Evidências técnicas documentadas:** fontes e conectores, transformações no Power Query, cardinalidade e direção dos relacionamentos, medidas DAX e justificativa das escolhas visuais.
+
 - 53.770 entregas analisadas
 - 87,02% de cumprimento do prazo
 - 12,98% de taxa de atraso
 - 64,02% de satisfação do cliente
 
-> Projeto em desenvolvimento. A apresentação final terá apenas três insights e recomendações objetivas.
+> Projeto em desenvolvimento. A apresentação final terá apenas três insights, enquanto a documentação técnica permite aprofundar a avaliação da solução.
 
-[Ver a construção do case](projects/customer-experience-performance-analytics/README.md)
+[Ver o case](projects/customer-experience-performance-analytics/README.md) · [Ver a implementação técnica](projects/customer-experience-performance-analytics/docs/technical-implementation.md)
 
 ### [SIM Mobile - Data Capture & Operational Analytics](https://github.com/KarineAssis/sim-mobile-case-study)
 
