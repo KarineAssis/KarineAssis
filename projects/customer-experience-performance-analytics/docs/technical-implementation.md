@@ -203,5 +203,5 @@ Visão geral → evolução dos atrasos → motivos de contato → impacto na sa
 | Arquivo `.pbix` | abertura direta no Power BI Desktop | será publicado após a revisão final |
 | Projeto `.pbip` | estrutura do relatório e do modelo semântico | preparado para publicação |
 | Imagens/PDF | visualização do dashboard sem Power BI Desktop | em preparação |
-| Dicionário de dados | descrição dos campos e regras | disponível na estrutura do projeto |
-| Documentação técnica | registro das etapas de construção | disponível neste repositório |
+| Dicionário de dados | explicar o significado de cada campo, seu tipo e sua regra de uso | será adicionado ao repositório |
+| Documentação técnica | registrar as etapas de construção da solução | disponível neste repositório |
