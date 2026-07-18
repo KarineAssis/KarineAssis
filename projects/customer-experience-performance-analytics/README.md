@@ -10,6 +10,10 @@
   <a href="files/Logistics_Customer_Experience_Analytics_FINAL.pbix?raw=1">
     <img src="https://img.shields.io/badge/Baixar%20relat%C3%B3rio-Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=000" alt="Baixar relatório Power BI">
   </a>
+  &nbsp;
+  <a href="../../Logistics_Customer_Experience_Analytics_FINAL.pdf?raw=1">
+    <img src="https://img.shields.io/badge/Visualizar%20dashboard-PDF-EC1C24?style=for-the-badge&logo=adobeacrobatreader&logoColor=white" alt="Visualizar dashboard em PDF">
+  </a>
 </div>
 
 ## Contexto do problema
