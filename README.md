@@ -46,17 +46,15 @@ O projeto conecta dados de entregas e registros de contato para identificar onde
 - 12,98% de taxa de atraso
 - 64,02% de satisfação do cliente
 
-> Projeto em desenvolvimento. A apresentação final terá apenas três insights, enquanto a documentação técnica permite aprofundar a avaliação da solução.
-
 [Ver o case](projects/customer-experience-performance-analytics/README.md) · [Ver a implementação técnica](projects/customer-experience-performance-analytics/docs/technical-implementation.md)
 
-### [SIM Mobile - Data Capture & Operational Analytics](https://github.com/KarineAssis/sim-mobile-case-study)
+### [SIM Mobile — Transformação Digital na Captura de Dados Operacionais](https://github.com/KarineAssis/sim-mobile-case-study)
 
 <a href="https://github.com/KarineAssis/sim-mobile-case-study">
-  <img src="https://raw.githubusercontent.com/KarineAssis/sim-mobile-case-study/main/assets/project-cover.svg" alt="SIM Mobile - Data capture, data quality and operational analytics" width="100%">
+  <img src="https://raw.githubusercontent.com/KarineAssis/sim-mobile-case-study/main/assets/project-cover.svg" alt="SIM Mobile - Transformação digital na captura de dados operacionais" width="100%">
 </a>
 
-Case que demonstra como um problema de captura de dados afetava a qualidade das informações operacionais. A iniciativa aproximou o registro do local de execução e criou uma base mais favorável para análises confiáveis e tomada de decisão.
+Case de transformação digital aplicado à captura de dados em ambiente industrial. A iniciativa aproximou o registro do local de execução, melhorou a disponibilidade das informações operacionais e criou uma base mais favorável para análises confiáveis e tomada de decisão.
 
 **Minha atuação:** diagnóstico do processo, jornada do usuário, requisitos funcionais, alinhamento com TI, testes, piloto, implantação, acompanhamento da adoção e definição de oportunidades analíticas.
 
