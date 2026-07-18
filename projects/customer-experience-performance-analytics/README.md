@@ -143,21 +143,6 @@ Essa sequência permite começar pelo desempenho logístico, avançar para os pr
 
 Na apresentação final, vou destacar apenas as três conclusões mais relevantes, mantendo a explicação objetiva.
 
-## Entregáveis
-
-- problema de negócio;
-- base sintética e dicionário de dados;
-- tratamento no Power Query;
-- modelo de dados e relacionamentos;
-- medidas DAX documentadas;
-- dashboard em Power BI;
-- três insights principais;
-- recomendações de negócio;
-- consultas SQL e análise simples em Python;
-- premissas e limitações;
-- arquivo `.pbix` após a revisão final;
-- projeto `.pbip` com a estrutura do relatório e do modelo.
-
 ## Próximas etapas
 
 - concluir a página executiva do dashboard;
