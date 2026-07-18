@@ -182,13 +182,13 @@ Depois de validar os cálculos, organizei a página executiva para conduzir a le
 
 No topo, coloquei os principais indicadores para oferecer uma visão geral rápida. Em seguida, usei um gráfico de linha para mostrar a evolução mensal da taxa de atraso. Os motivos de contato foram apresentados em barras horizontais, facilitando a comparação entre categorias. Por fim, a satisfação foi comparada por situação da entrega para mostrar a diferença entre pedidos atrasados e cumpridos.
 
-| Elemento | Visual escolhido | Papel na narrativa |
+| Elemento da página | Tipo de visual | Função no dashboard |
 |---|---|---|
-| Indicadores principais | cartões | apresentar o cenário geral |
-| Evolução mensal | gráfico de linha | mostrar tendência e períodos críticos |
-| Motivos de contato | barras horizontais | comparar as categorias mais frequentes |
-| Satisfação por status | colunas comparativas | relacionar atraso e experiência do cliente |
-| Filtros | poucos e relevantes | permitir recortes sem poluir a página |
+| Indicadores principais | Cartões | Resumir o cenário geral |
+| Evolução da taxa de atraso | Gráfico de linha | Mostrar tendências e períodos críticos |
+| Principais motivos de contato | Gráfico de barras horizontais | Comparar as categorias mais frequentes |
+| Satisfação por situação da entrega | Gráfico de colunas | Comparar entregas atrasadas e cumpridas |
+| Filtros de análise | Segmentadores | Permitir recortes relevantes sem poluir a página |
 
 A leitura do dashboard segue esta ordem:
 
