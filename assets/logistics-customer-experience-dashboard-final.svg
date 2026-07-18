@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Logistics Customer Experience Dashboard</title>
+  <desc id="desc">Dashboard final com indicadores de entregas, cumprimento do prazo, atraso, satisfação, evolução mensal, motivos de contato e satisfação por situação da entrega.</desc>
+  <defs>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#000" flood-opacity=".16"/></filter>
+    <style>
+      .title{font:700 31px Arial,Helvetica,sans-serif;fill:#20262b}.sub{font:400 15px Arial,Helvetica,sans-serif;fill:#5f6b73}.kpi{font:500 43px Arial,Helvetica,sans-serif;fill:#20262b}.label{font:400 15px Arial,Helvetica,sans-serif;fill:#6d747a}.section{font:700 17px Arial,Helvetica,sans-serif;fill:#20262b}.axis{font:400 11px Arial,Helvetica,sans-serif;fill:#6c757d}.barlabel{font:400 12px Arial,Helvetica,sans-serif;fill:#5f6b73}.value{font:700 11px Arial,Helvetica,sans-serif;fill:#fff}.pct{font:400 12px Arial,Helvetica,sans-serif;fill:#48545c}
+    </style>
+  </defs>
+  <rect width="1400" height="760" fill="#fff"/>
+
+  <text x="45" y="44" class="title">Logistics Customer Experience</text>
+  <text x="45" y="70" class="sub">Desempenho das entregas e impacto na satisfação do cliente</text>
+
+  <rect x="1085" y="21" width="180" height="54" rx="3" fill="#fff" stroke="#d8dde1" filter="url(#shadow)"/>
+  <text x="1105" y="43" class="axis">Ano</text><text x="1105" y="65" class="barlabel">Todos</text>
+  <path d="M1234 47 l8 8 l8-8" fill="none" stroke="#7e878e" stroke-width="1.5"/>
+
+  <g filter="url(#shadow)">
+    <rect x="45" y="95" width="294" height="102" fill="#fff"/>
+    <rect x="355" y="95" width="294" height="102" fill="#fff"/>
+    <rect x="665" y="95" width="294" height="102" fill="#fff"/>
+    <rect x="975" y="95" width="294" height="102" fill="#fff"/>
+  </g>
+  <text x="83" y="154" class="kpi">53,77 Mil</text><text x="110" y="184" class="label">Entregas Analisadas</text>
+  <text x="404" y="154" class="kpi">87,02 %</text><text x="411" y="184" class="label">Cumprimento do Prazo</text>
+  <text x="716" y="154" class="kpi">12,98 %</text><text x="717" y="184" class="label">Taxa de Atraso Logístico</text>
+  <text x="1026" y="154" class="kpi">64,02%</text><text x="1046" y="184" class="label">Satisfação do Cliente</text>
+
+  <rect x="45" y="218" width="610" height="260" fill="#fff" stroke="#e5e8eb" filter="url(#shadow)"/>
+  <text x="59" y="246" class="section">Evolução mensal da taxa de atraso</text>
+  <line x1="90" y1="417" x2="625" y2="417" stroke="#dce2e6"/><line x1="90" y1="348" x2="625" y2="348" stroke="#e6eaed"/><line x1="90" y1="279" x2="625" y2="279" stroke="#e6eaed"/>
+  <text x="57" y="421" class="axis">0%</text><text x="49" y="352" class="axis">10%</text><text x="49" y="283" class="axis">20%</text>
+  <polyline points="91,389 118,369 145,355 172,321 199,383 226,336 253,357 280,376 307,342 334,347 361,286 388,263 415,380 442,342 469,326 496,329 523,361 550,330 577,378 610,402" fill="none" stroke="#3b5667" stroke-width="4" stroke-linejoin="round"/>
+  <g class="axis" transform="rotate(-42 92 445)"><text x="92" y="445">2019-01</text></g><g class="axis" transform="rotate(-42 148 445)"><text x="148" y="445">2019-03</text></g><g class="axis" transform="rotate(-42 204 445)"><text x="204" y="445">2019-05</text></g><g class="axis" transform="rotate(-42 260 445)"><text x="260" y="445">2019-07</text></g><g class="axis" transform="rotate(-42 316 445)"><text x="316" y="445">2019-09</text></g><g class="axis" transform="rotate(-42 372 445)"><text x="372" y="445">2019-11</text></g><g class="axis" transform="rotate(-42 428 445)"><text x="428" y="445">2020-01</text></g><g class="axis" transform="rotate(-42 484 445)"><text x="484" y="445">2020-03</text></g><g class="axis" transform="rotate(-42 540 445)"><text x="540" y="445">2020-05</text></g><g class="axis" transform="rotate(-42 596 445)"><text x="596" y="445">2020-08</text></g>
+
+  <rect x="675" y="218" width="594" height="260" fill="#fff" stroke="#e5e8eb" filter="url(#shadow)"/>
+  <text x="689" y="246" class="section">Principais motivos de contato</text>
+  <text x="700" y="285" class="barlabel">Atraso na entrega</text><rect x="855" y="269" width="350" height="23" fill="#3b5667"/><text x="1159" y="285" class="value">3,8 Mil</text>
+  <text x="700" y="322" class="barlabel">Item faltante</text><rect x="855" y="306" width="194" height="23" fill="#3b5667"/><text x="1009" y="322" class="pct">2,1 Mil</text>
+  <text x="700" y="359" class="barlabel">Onde está meu pedido?</text><rect x="855" y="343" width="194" height="23" fill="#3b5667"/><text x="1009" y="359" class="pct">2,1 Mil</text>
+  <text x="700" y="396" class="barlabel">Item incorreto</text><rect x="855" y="380" width="157" height="23" fill="#3b5667"/><text x="973" y="396" class="pct">1,7 Mil</text>
+  <text x="700" y="433" class="barlabel">Informação sobre entrega</text><rect x="855" y="417" width="148" height="23" fill="#3b5667"/><text x="964" y="433" class="pct">1,6 Mil</text>
+  <text x="700" y="470" class="barlabel">Pedido danificado</text><rect x="855" y="454" width="130" height="23" fill="#3b5667"/><text x="948" y="470" class="pct">1,4 Mil</text>
+
+  <rect x="45" y="501" width="1224" height="218" fill="#fff" stroke="#e5e8eb" filter="url(#shadow)"/>
+  <text x="59" y="529" class="section">Satisfação do cliente por situação da entrega</text>
+  <line x1="91" y1="682" x2="1238" y2="682" stroke="#dce2e6"/><line x1="91" y1="645" x2="1238" y2="645" stroke="#e6eaed"/><line x1="91" y1="608" x2="1238" y2="608" stroke="#e6eaed"/><line x1="91" y1="571" x2="1238" y2="571" stroke="#e6eaed"/>
+  <text x="58" y="686" class="axis">0%</text><text x="50" y="649" class="axis">20%</text><text x="50" y="612" class="axis">40%</text><text x="50" y="575" class="axis">60%</text><text x="50" y="538" class="axis">80%</text>
+  <rect x="208" y="546" width="244" height="136" fill="#3b5667"/><rect x="510" y="547" width="244" height="135" fill="#3b5667"/><rect x="812" y="584" width="244" height="98" fill="#3b5667"/>
+  <text x="309" y="538" class="pct">74,12%</text><text x="611" y="539" class="pct">73,52%</text><text x="913" y="576" class="pct">52,99%</text>
+  <text x="300" y="704" class="barlabel">Antecipado</text><text x="609" y="704" class="barlabel">No Prazo</text><text x="919" y="704" class="barlabel">Atrasado</text>
+</svg>
