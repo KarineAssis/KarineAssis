@@ -130,24 +130,18 @@ CALCULATE(
 
 [Ver a construção técnica completa](docs/technical-implementation.md)
 
-## Construção do dashboard
+## Como organizei a análise no dashboard
 
-Organizei a página para contar a história dos dados em uma sequência simples:
+Depois de validar os cálculos, organizei a página para conduzir a leitura do cenário geral até o impacto percebido pelo cliente:
 
-1. visão geral dos indicadores;
-2. evolução mensal dos atrasos;
-3. principais motivos de contato;
-4. comparação da satisfação por situação da entrega.
+1. **visão geral**, com os principais indicadores de entrega;
+2. **evolução dos atrasos**, para identificar tendências e períodos críticos;
+3. **motivos de contato**, para entender quais problemas aparecem com maior frequência;
+4. **satisfação por situação da entrega**, para comparar pedidos atrasados e cumpridos.
 
-Os cartões apresentam os KPIs principais. O gráfico de linha mostra a evolução no tempo. As barras horizontais facilitam a comparação dos motivos, e as colunas comparativas mostram a diferença de satisfação entre entregas atrasadas e cumpridas.
+Essa sequência permite começar pelo desempenho logístico, avançar para os principais problemas relatados e terminar mostrando como o atraso se relaciona com a satisfação do cliente.
 
-## Escopo da apresentação
-
-A apresentação final será curta e concentrada em três análises:
-
-1. evolução do desempenho das entregas;
-2. principais motivos de contato dos clientes;
-3. relação entre atraso e satisfação.
+Na apresentação final, vou destacar apenas as três conclusões mais relevantes, mantendo a explicação objetiva.
 
 ## Entregáveis
 
