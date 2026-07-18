@@ -54,6 +54,5 @@
 
   <rect x="48" y="536" width="1304" height="170" rx="16" fill="#eaf0f4" stroke="#c7d6e0"/>
   <text x="74" y="574" class="section">Narrativa do case</text>
-  <text x="74" y="612" class="body">Problema logístico → dados sintéticos → tratamento → modelagem → dashboard → três insights → recomendações.</text>
-  <text x="74" y="652" class="small">Projeto em desenvolvimento • dados totalmente fictícios • sem uso de informações confidenciais</text>
+  <text x="74" y="612" class="body">Problema logístico → fontes de dados → tratamento → modelagem → dashboard → insights → recomendações.</text>
 </svg>
