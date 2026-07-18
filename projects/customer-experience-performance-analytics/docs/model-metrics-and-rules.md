@@ -1,12 +1,12 @@
-# Modelo, métricas e regras analíticas
+# Modelo e indicadores
 
 ## Estrutura do modelo
 
-O modelo combina desempenho operacional e experiência do cliente por meio de duas tabelas fato.
+O modelo conecta o desempenho das entregas com os registros de contato e satisfação dos clientes.
 
 ### Fato_Entregas
 
-Representa cada entrega e contém informações como:
+Contém as informações principais de cada entrega:
 
 - pedido;
 - data do pedido;
@@ -14,108 +14,69 @@ Representa cada entrega e contém informações como:
 - data realizada;
 - status da entrega;
 - lead time;
-- desvio do prazo.
+- dias de atraso.
 
 ### Fato_Interacoes
 
-Representa cada contato de atendimento e contém:
+Contém os registros relacionados à experiência do cliente:
 
-- interação e jornada;
+- interação;
 - pedido relacionado;
-- data e hora do contato;
-- LOB, canal e motivo;
-- agente e equipe;
-- AHT;
-- FCR;
-- recontato;
-- escalonamento;
-- QA;
-- resposta de pesquisa;
-- CSAT e DSAT.
+- data do contato;
+- motivo;
+- canal;
+- cidade ou equipe;
+- resposta de satisfação.
 
-## Dimensões
+## Dimensões principais
 
-- `Dim_Calendario` — período e atributos temporais;
-- `Dim_Agentes` — agentes fictícios;
+- `Dim_Calendario` — datas, meses e anos;
 - `Dim_Motivos` — motivos de contato;
-- `Dim_LOB` — Customer, Rider e Merchant;
-- `Dim_Canal_Atendimento` — Chat, Voz e E-mail;
-- `Dim_Equipe_Atendimento` — equipes fictícias.
+- `Dim_Canal_Atendimento` — canais utilizados;
+- `Dim_Equipe_Atendimento` — equipes da operação;
+- demais dimensões auxiliares do modelo.
 
 As dimensões filtram as tabelas fato em relacionamentos de um para muitos.
 
-## Indicadores principais
+## Indicadores apresentados
 
-### CSAT
+### Entregas analisadas
 
-Percentual de respostas com nota considerada satisfeita sobre o total de pesquisas respondidas.
+Quantidade total de entregas presentes na base.
 
-### DSAT
+### Cumprimento do prazo
 
-Percentual de respostas consideradas insatisfeitas sobre o total de pesquisas respondidas.
+Percentual de entregas concluídas no prazo ou antecipadamente.
 
-### FCR
+### Taxa de atraso
 
-Percentual de jornadas resolvidas no primeiro contato.
+Percentual de entregas realizadas depois da data prevista.
 
-### AHT
+### Lead time médio
 
-Tempo médio de atendimento. Deve ser interpretado junto com complexidade, FCR, recontato e QA.
+Tempo médio entre a data do pedido e a realização da entrega.
 
-### Taxa de recontato
+### Interações de clientes
 
-Percentual de jornadas que exigiram novo contato para o mesmo problema.
+Quantidade de registros de contato relacionados às entregas.
 
-### Taxa de escalonamento
+### Satisfação do cliente
 
-Percentual de interações encaminhadas para um nível adicional de suporte.
+Percentual de respostas classificadas como satisfeitas entre as pesquisas respondidas.
 
-### QA médio
+## Análises do dashboard
 
-Indicador médio de qualidade do atendimento.
+1. evolução mensal do desempenho das entregas;
+2. comparação por cidade, canal ou equipe;
+3. principais motivos de contato;
+4. satisfação por status da entrega.
 
-## Medidas de diagnóstico
-
-- Gap de CSAT por atraso;
-- CSAT de pedidos atrasados;
-- CSAT de pedidos cumpridos;
-- respostas DSAT por motivo;
-- participação no DSAT total;
-- interações por jornada;
-- volume mínimo para ranking.
-
-## Score de performance
-
-O score combina quatro dimensões:
-
-| Componente | Peso |
-|---|---:|
-| CSAT | 35% |
-| FCR | 30% |
-| QA | 20% |
-| Redução de recontatos | 15% |
-
-O AHT não entra diretamente no score. Ele permanece como indicador de diagnóstico para evitar que um atendimento curto seja interpretado automaticamente como uma boa experiência.
-
-## Elegibilidade para ranking
-
-O agente precisa atingir um volume mínimo de interações e pesquisas respondidas. Esse critério evita comparações frágeis entre agentes com bases muito diferentes.
-
-## Segmentação por quartil
-
-- `Q1` — referência de performance;
-- `Q2` — performance consistente;
-- `Q3` — atenção e acompanhamento;
-- `Q4` — prioridade de desenvolvimento.
-
-O quartil é uma ferramenta de segmentação, não uma conclusão isolada. A leitura final deve considerar LOB, motivo, complexidade e volume.
+Para manter a apresentação objetiva, apenas as três análises mais relevantes serão destacadas no case final.
 
 ## Regras de interpretação
 
-1. CSAT e DSAT usam apenas pesquisas respondidas.
-2. Ausência de resposta não é tratada como satisfação ou insatisfação.
-3. Taxas são acompanhadas por volumes absolutos.
-4. AHT alto não significa necessariamente baixa performance.
-5. Correlação entre atraso e satisfação não prova causalidade.
-6. Rankings exigem critérios mínimos de comparabilidade.
-7. Recomendações devem priorizar impacto, recorrência e capacidade de ação.
+- taxas devem ser analisadas junto com volumes;
+- pesquisas não respondidas não são tratadas como satisfeitas ou insatisfeitas;
+- grupos com baixo volume exigem cautela;
+- relação entre atraso e satisfação indica associação, não necessariamente causalidade;
+- o dashboard deve apoiar priorização, e não apenas exibir indicadores.
