@@ -6,7 +6,7 @@
   <img src="../../assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
 </div>
 
-> Projeto em desenvolvimento. Todos os dados são sintéticos e foram criados para fins educacionais e de portfólio.
+> Projeto em desenvolvimento. Todos os dados são sintéticos e foram criados para fins educacionais.
 
 ## Contexto do problema
 
@@ -54,53 +54,51 @@ A base foi gerada programaticamente para criar um cenário plausível de anális
 | Taxa de atraso | 12,98% |
 | Satisfação do cliente | 64,02% |
 
-## Jornada técnica da solução
+## Como construí a solução
+
+Depois de definir o problema, comecei mapeando as fontes disponíveis. A base logística estava em Excel e reunia pedidos, datas, equipes, canais e status de entrega. Os registros de contato e as dimensões auxiliares estavam em arquivos CSV.
 
 ```text
-Mapeamento das fontes
-        ↓
-Tratamento e validação no Power Query
-        ↓
-Modelo dimensional e relacionamentos
-        ↓
+Fontes de dados
+      ↓
+Tratamento no Power Query
+      ↓
+Modelo dimensional
+      ↓
 Medidas DAX
-        ↓
+      ↓
 Dashboard em Power BI
-        ↓
-Insights e recomendações
 ```
-
-### Fontes e conectores
-
-- arquivo Excel com a base logística, importado com `Excel.Workbook` e `File.Contents`;
-- arquivos CSV UTF-8 com registros de contato e dimensões auxiliares, importados com `Csv.Document`;
-- para um ambiente produtivo, a arquitetura poderia ser adaptada para SQL, data warehouse, lakehouse ou SharePoint, com atualização agendada.
 
 ### Tratamento no Power Query
 
-Foram realizadas transformações como:
+Na base de entregas, corrigi os tipos e a localidade das datas, criei uma chave técnica e calculei o lead time e o desvio entre a data prevista e a data realizada.
 
-- correção dos tipos de dados e localidade das datas;
-- promoção de cabeçalhos;
-- criação da chave técnica `ID_Entrega`;
-- cálculo de `Lead_Time_Dias`;
-- cálculo de `Desvio_Prazo_Dias`;
-- criação do `Status_Validado`;
-- verificação da consistência entre o status original e o recalculado;
-- padronização dos campos de motivo, canal e satisfação.
+A partir desse desvio, criei um status validado:
 
-### Modelagem dimensional
+```powerquery
+Status_Validado =
+if [Desvio_Prazo_Dias] < 0 then "Antecipado"
+else if [Desvio_Prazo_Dias] = 0 then "No Prazo"
+else "Atrasado"
+```
 
-O modelo utiliza duas tabelas fato:
+Também comparei o status original com o status recalculado para identificar possíveis inconsistências. Na base de interações, padronizei os campos de data, canal, motivo e satisfação.
+
+### Modelagem dos dados
+
+Com as bases tratadas, organizei o modelo com duas tabelas fato:
 
 - `Fato_Entregas`: informações sobre prazo, status e atraso;
 - `Fato_Interacoes`: registros de contato e satisfação do cliente.
 
-As dimensões organizam período, motivo, canal, cidade e equipe. Os relacionamentos principais utilizam cardinalidade **um para muitos** e direção de filtro da dimensão para a tabela fato.
+As dimensões organizam calendário, motivo, canal, cidade e equipe. Os relacionamentos principais utilizam cardinalidade **um para muitos**, com direção de filtro da dimensão para a tabela fato.
 
-A `Dim_Calendario` possui um relacionamento ativo com `Data_Pedido` e relacionamentos inativos com as datas prevista e realizada. As análises por data de entrega utilizam `USERELATIONSHIP` nas medidas DAX.
+A `Dim_Calendario` possui um relacionamento ativo com `Data_Pedido` e relacionamentos inativos com as datas prevista e realizada. Quando precisei analisar a entrega pela data em que ela realmente ocorreu, usei `USERELATIONSHIP` nas medidas.
 
-### Medidas DAX selecionadas
+### Medidas DAX
+
+Com o modelo pronto, criei as medidas que alimentam o dashboard.
 
 ```DAX
 Entregas Atrasadas =
@@ -130,27 +128,26 @@ CALCULATE(
 )
 ```
 
-As medidas foram criadas para responder dinamicamente aos filtros do relatório. Foram aplicadas boas práticas como `DIVIDE`, `CALCULATE`, organização das medidas em tabela específica e uso de variáveis somente quando aumentam a clareza do cálculo.
+[Ver a construção técnica completa](docs/technical-implementation.md)
 
-[Ver a implementação técnica completa](docs/technical-implementation.md)
+## Construção do dashboard
 
-## Decisões de visualização
+Organizei a página para contar a história dos dados em uma sequência simples:
 
-- **cartões:** leitura rápida dos KPIs principais;
-- **gráfico de linha:** evolução mensal e identificação de tendências;
-- **barras horizontais:** comparação dos principais motivos de contato;
-- **colunas comparativas:** diferença de satisfação entre entregas atrasadas e cumpridas;
-- **poucos filtros:** navegação simples e apresentação objetiva.
+1. visão geral dos indicadores;
+2. evolução mensal dos atrasos;
+3. principais motivos de contato;
+4. comparação da satisfação por situação da entrega.
 
-## Escopo do dashboard
+Os cartões apresentam os KPIs principais. O gráfico de linha mostra a evolução no tempo. As barras horizontais facilitam a comparação dos motivos, e as colunas comparativas mostram a diferença de satisfação entre entregas atrasadas e cumpridas.
 
-A apresentação será curta e focada em três análises:
+## Escopo da apresentação
+
+A apresentação final será curta e concentrada em três análises:
 
 1. evolução do desempenho das entregas;
 2. principais motivos de contato dos clientes;
 3. relação entre atraso e satisfação.
-
-O objetivo é demonstrar conhecimento técnico sem tornar o case excessivamente longo ou especializado.
 
 ## Entregáveis
 
@@ -165,7 +162,7 @@ O objetivo é demonstrar conhecimento técnico sem tornar o case excessivamente 
 - consultas SQL e análise simples em Python;
 - premissas e limitações;
 - arquivo `.pbix` após a revisão final;
-- projeto `.pbip` como evidência adicional da estrutura técnica.
+- projeto `.pbip` com a estrutura do relatório e do modelo.
 
 ## Próximas etapas
 
@@ -181,7 +178,7 @@ O objetivo é demonstrar conhecimento técnico sem tornar o case excessivamente 
 
 - [Problema de negócio e metodologia](docs/business-problem-and-methodology.md)
 - [Modelo e indicadores](docs/model-metrics-and-rules.md)
-- [Implementação técnica da solução](docs/technical-implementation.md)
+- [Como construí a solução](docs/technical-implementation.md)
 
 ## Premissas e limitações
 
@@ -189,4 +186,4 @@ O objetivo é demonstrar conhecimento técnico sem tornar o case excessivamente 
 - os resultados não representam uma empresa real;
 - a satisfação é baseada apenas nas respostas disponíveis;
 - associações entre atraso e satisfação não comprovam causalidade;
-- o projeto demonstra método analítico, modelagem, DAX e visualização de dados.
+- o projeto demonstra método analítico, modelagem e visualização de dados.
