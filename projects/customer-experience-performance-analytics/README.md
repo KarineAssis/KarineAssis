@@ -143,16 +143,6 @@ Essa sequência permite começar pelo desempenho logístico, avançar para os pr
 
 Na apresentação final, vou destacar apenas as três conclusões mais relevantes, mantendo a explicação objetiva.
 
-## Próximas etapas
-
-- concluir a página executiva do dashboard;
-- validar os indicadores finais;
-- selecionar três insights principais;
-- elaborar recomendações objetivas;
-- salvar e publicar o arquivo `.pbix`;
-- adicionar SQL e Python ao repositório;
-- publicar as imagens finais do dashboard.
-
 ## Documentação complementar
 
 - [Problema de negócio e metodologia](docs/business-problem-and-methodology.md)
