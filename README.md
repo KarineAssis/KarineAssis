@@ -27,24 +27,27 @@ Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KP
 
 ## Projetos selecionados
 
-### [Delivery Reliability - Logistics Analytics](projects/delivery-reliability/README.md)
+### [Customer Experience Performance Analytics](projects/customer-experience-performance-analytics/README.md)
 
-<a href="projects/delivery-reliability/README.md">
-  <img src="assets/delivery-reliability-preview.svg" alt="Delivery Reliability - análise de desempenho logístico em Power BI" width="100%">
+<a href="projects/customer-experience-performance-analytics/README.md">
+  <img src="assets/customer-experience-performance-preview.svg" alt="Customer Experience Performance Analytics" width="100%">
 </a>
 
-Case de análise de dados logísticos construído para identificar onde os atrasos estão concentrados e apoiar a priorização operacional com base em volume, taxa de atraso e impacto.
+Case de análise integrada entre desempenho operacional, atendimento e experiência do cliente em uma operação de delivery.
 
-**Escopo atual:** auditoria no Excel, tratamento no Power Query, modelagem dimensional, medidas DAX, análise temporal e dashboard executivo em Power BI.
+O projeto busca responder como atrasos, motivos de contato, resolução, recontato, escalonamento e complexidade influenciam CSAT, DSAT, AHT e FCR — e como transformar esses resultados em prioridades de negócio.
 
-- 53.770 entregas analisadas
-- 87,02% de cumprimento do prazo
-- 12,98% de taxa de atraso
-- 2,84 dias de lead time médio
+**Escopo atual:** base sintética, Power Query, modelo dimensional, medidas DAX, análise de CSAT/DSAT/AHT/FCR, ranking e quartis de performance.
 
-> Projeto em desenvolvimento. As próximas etapas incluirão aprofundamento analítico, SQL, Python, Pareto e ranking de prioridade.
+- 16.318 interações analisadas
+- 64,02% de CSAT
+- 9,90% de DSAT
+- 57,76% de FCR
+- 12,09 minutos de AHT médio
 
-[Ver a construção do case](projects/delivery-reliability/README.md)
+> Projeto em desenvolvimento. SQL, Python, cinco insights principais e recomendações serão adicionados nas próximas etapas.
+
+[Ver a construção do case](projects/customer-experience-performance-analytics/README.md)
 
 ### [SIM Mobile - Data Capture & Operational Analytics](https://github.com/KarineAssis/sim-mobile-case-study)
 
