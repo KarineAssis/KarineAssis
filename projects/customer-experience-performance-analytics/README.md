@@ -68,6 +68,20 @@ A base foi gerada programaticamente para criar um cenário plausível de anális
   <img src="../../assets/logistics-customer-experience-dashboard-final.svg" alt="Dashboard Logistics Customer Experience Analytics" width="100%">
 </div>
 
+## Principais insights
+
+**1. A taxa de atraso apresentou oscilações relevantes ao longo do período**, ultrapassando 20% no momento mais crítico.
+
+**2. Atraso na entrega foi o principal motivo de contato dos clientes**, com aproximadamente 3,8 mil registros.
+
+**3. A satisfação caiu para 52,99% nas entregas atrasadas**, enquanto permaneceu acima de 73% nas entregas realizadas no prazo ou antecipadamente.
+
+## Recomendações
+
+- acompanhar mensalmente a taxa de atraso e investigar aumentos fora do padrão;
+- priorizar ações sobre as causas que geram atrasos e contatos dos clientes;
+- adotar comunicação proativa quando houver risco de descumprimento do prazo.
+
 ## Como construí a solução
 
 Depois de definir o problema, comecei mapeando as fontes disponíveis. A base logística estava em Excel e reunia pedidos, datas, equipes, canais e status de entrega. Os registros de contato e as dimensões auxiliares estavam em arquivos CSV.
@@ -109,6 +123,10 @@ Com as bases tratadas, organizei o modelo com duas tabelas fato:
 As dimensões organizam calendário, motivo, canal, cidade e equipe. Os relacionamentos principais utilizam cardinalidade **um para muitos**, com direção de filtro da dimensão para a tabela fato.
 
 A `Dim_Calendario` possui um relacionamento ativo com `Data_Pedido` e relacionamentos inativos com as datas prevista e realizada. Quando precisei analisar a entrega pela data em que ela realmente ocorreu, usei `USERELATIONSHIP` nas medidas.
+
+<div align="center">
+  <img src="../../assets/customer-experience-data-model.svg" alt="Modelo de dados do Case 02" width="100%">
+</div>
 
 ### Medidas DAX
 
@@ -154,8 +172,6 @@ Depois de validar os cálculos, organizei a página para conduzir a leitura do c
 4. **satisfação por situação da entrega**, para comparar pedidos atrasados e cumpridos.
 
 Essa sequência permite começar pelo desempenho logístico, avançar para os principais problemas relatados e terminar mostrando como o atraso se relaciona com a satisfação do cliente.
-
-A apresentação destaca apenas as três conclusões mais relevantes, mantendo a explicação objetiva.
 
 ## Documentação complementar
 
