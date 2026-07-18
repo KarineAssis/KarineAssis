@@ -6,6 +6,12 @@
   <img src="../../assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
 </div>
 
+<div align="center">
+  <a href="files/Logistics_Customer_Experience_Analytics_FINAL.pbix?raw=1">
+    <img src="https://img.shields.io/badge/Baixar%20relat%C3%B3rio-Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=000" alt="Baixar relatório Power BI">
+  </a>
+</div>
+
 ## Contexto do problema
 
 Uma empresa de logística está enfrentando atrasos nas entregas e aumento nas reclamações dos clientes.
