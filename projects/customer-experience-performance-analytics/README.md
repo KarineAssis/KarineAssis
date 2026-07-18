@@ -54,23 +54,93 @@ A base foi gerada programaticamente para criar um cenário plausível de anális
 | Taxa de atraso | 12,98% |
 | Satisfação do cliente | 64,02% |
 
-## Ferramentas e abordagem
+## Jornada técnica da solução
 
-- **Excel:** auditoria inicial dos dados;
-- **Power Query:** limpeza, padronização e transformação;
-- **Modelo dimensional:** relacionamento entre entregas, interações, calendário, motivos e canais;
-- **DAX:** criação dos indicadores;
-- **Power BI:** dashboard e comunicação dos resultados;
-- **SQL e Python:** análises complementares planejadas.
+```text
+Mapeamento das fontes
+        ↓
+Tratamento e validação no Power Query
+        ↓
+Modelo dimensional e relacionamentos
+        ↓
+Medidas DAX
+        ↓
+Dashboard em Power BI
+        ↓
+Insights e recomendações
+```
 
-## Estrutura do modelo
+### Fontes e conectores
 
-O projeto utiliza duas tabelas principais:
+- arquivo Excel com a base logística, importado com `Excel.Workbook` e `File.Contents`;
+- arquivos CSV UTF-8 com registros de contato e dimensões auxiliares, importados com `Csv.Document`;
+- para um ambiente produtivo, a arquitetura poderia ser adaptada para SQL, data warehouse, lakehouse ou SharePoint, com atualização agendada.
+
+### Tratamento no Power Query
+
+Foram realizadas transformações como:
+
+- correção dos tipos de dados e localidade das datas;
+- promoção de cabeçalhos;
+- criação da chave técnica `ID_Entrega`;
+- cálculo de `Lead_Time_Dias`;
+- cálculo de `Desvio_Prazo_Dias`;
+- criação do `Status_Validado`;
+- verificação da consistência entre o status original e o recalculado;
+- padronização dos campos de motivo, canal e satisfação.
+
+### Modelagem dimensional
+
+O modelo utiliza duas tabelas fato:
 
 - `Fato_Entregas`: informações sobre prazo, status e atraso;
 - `Fato_Interacoes`: registros de contato e satisfação do cliente.
 
-As dimensões organizam período, motivo, canal, cidade e equipe, permitindo filtrar e comparar os resultados.
+As dimensões organizam período, motivo, canal, cidade e equipe. Os relacionamentos principais utilizam cardinalidade **um para muitos** e direção de filtro da dimensão para a tabela fato.
+
+A `Dim_Calendario` possui um relacionamento ativo com `Data_Pedido` e relacionamentos inativos com as datas prevista e realizada. As análises por data de entrega utilizam `USERELATIONSHIP` nas medidas DAX.
+
+### Medidas DAX selecionadas
+
+```DAX
+Entregas Atrasadas =
+CALCULATE(
+    [Total Entregas],
+    Fato_Entregas[Status_Validado] = "Atrasado"
+)
+```
+
+```DAX
+Taxa de Atraso =
+DIVIDE(
+    [Entregas Atrasadas],
+    [Total Entregas],
+    0
+)
+```
+
+```DAX
+Total Entregas Realizadas =
+CALCULATE(
+    [Total Entregas],
+    USERELATIONSHIP(
+        Fato_Entregas[Data_Entrega_Realizada],
+        Dim_Calendario[Data]
+    )
+)
+```
+
+As medidas foram criadas para responder dinamicamente aos filtros do relatório. Foram aplicadas boas práticas como `DIVIDE`, `CALCULATE`, organização das medidas em tabela específica e uso de variáveis somente quando aumentam a clareza do cálculo.
+
+[Ver a implementação técnica completa](docs/technical-implementation.md)
+
+## Decisões de visualização
+
+- **cartões:** leitura rápida dos KPIs principais;
+- **gráfico de linha:** evolução mensal e identificação de tendências;
+- **barras horizontais:** comparação dos principais motivos de contato;
+- **colunas comparativas:** diferença de satisfação entre entregas atrasadas e cumpridas;
+- **poucos filtros:** navegação simples e apresentação objetiva.
 
 ## Escopo do dashboard
 
@@ -87,13 +157,15 @@ O objetivo é demonstrar conhecimento técnico sem tornar o case excessivamente 
 - problema de negócio;
 - base sintética e dicionário de dados;
 - tratamento no Power Query;
-- modelo de dados;
-- medidas DAX;
+- modelo de dados e relacionamentos;
+- medidas DAX documentadas;
 - dashboard em Power BI;
 - três insights principais;
 - recomendações de negócio;
 - consultas SQL e análise simples em Python;
-- premissas e limitações.
+- premissas e limitações;
+- arquivo `.pbix` após a revisão final;
+- projeto `.pbip` como evidência adicional da estrutura técnica.
 
 ## Próximas etapas
 
@@ -101,6 +173,7 @@ O objetivo é demonstrar conhecimento técnico sem tornar o case excessivamente 
 - validar os indicadores finais;
 - selecionar três insights principais;
 - elaborar recomendações objetivas;
+- salvar e publicar o arquivo `.pbix`;
 - adicionar SQL e Python ao repositório;
 - publicar as imagens finais do dashboard.
 
@@ -108,6 +181,7 @@ O objetivo é demonstrar conhecimento técnico sem tornar o case excessivamente 
 
 - [Problema de negócio e metodologia](docs/business-problem-and-methodology.md)
 - [Modelo e indicadores](docs/model-metrics-and-rules.md)
+- [Implementação técnica da solução](docs/technical-implementation.md)
 
 ## Premissas e limitações
 
@@ -115,4 +189,4 @@ O objetivo é demonstrar conhecimento técnico sem tornar o case excessivamente 
 - os resultados não representam uma empresa real;
 - a satisfação é baseada apenas nas respostas disponíveis;
 - associações entre atraso e satisfação não comprovam causalidade;
-- o projeto demonstra método analítico, modelagem e visualização de dados.
+- o projeto demonstra método analítico, modelagem, DAX e visualização de dados.
