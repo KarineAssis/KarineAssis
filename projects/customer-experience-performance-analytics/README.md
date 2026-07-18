@@ -8,12 +8,6 @@
 
 > Todos os dados são sintéticos e foram criados para fins educacionais.
 
-<div align="center">
-  <a href="files/Logistics_Customer_Experience_Analytics_FINAL.pbix">
-    <img src="https://img.shields.io/badge/Baixar%20relatório-Power%20BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=000" alt="Baixar relatório Power BI">
-  </a>
-</div>
-
 ## Contexto do problema
 
 Uma empresa de logística está enfrentando atrasos nas entregas e aumento nas reclamações dos clientes.
@@ -63,7 +57,7 @@ A base foi gerada programaticamente para criar um cenário plausível de anális
 ## Dashboard final
 
 <div align="center">
-  <img src="../../assets/logistics-customer-experience-dashboard.png" alt="Dashboard Logistics Customer Experience Analytics" width="100%">
+  <img src="../../assets/logistics-customer-experience-dashboard-final.svg" alt="Dashboard Logistics Customer Experience Analytics" width="100%">
 </div>
 
 ## Como construí a solução
