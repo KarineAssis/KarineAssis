@@ -6,8 +6,6 @@
   <img src="../../assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
 </div>
 
-> Todos os dados são sintéticos e foram criados para fins educacionais.
-
 ## Contexto do problema
 
 Uma empresa de logística está enfrentando atrasos nas entregas e aumento nas reclamações dos clientes.
