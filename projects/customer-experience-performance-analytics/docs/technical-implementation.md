@@ -1,12 +1,10 @@
-# Implementação técnica da solução
+# Como construí a solução
 
-Este documento mostra a jornada técnica do case: **fontes de dados → Power Query → modelo dimensional → medidas DAX → dashboard → entrega**.
+O ponto de partida foi um problema simples: uma empresa de logística tinha dados sobre pedidos, entregas e contatos de clientes, mas essas informações estavam separadas. Antes de construir qualquer visual, eu precisava organizar as fontes, tratar os dados e criar um modelo que permitisse acompanhar o desempenho das entregas e relacioná-lo à satisfação do cliente.
 
-O objetivo é deixar evidente não apenas o contexto de negócio, mas também como a solução foi construída no Power BI.
+## 1. Mapeamento das fontes
 
-## 1. Mapeamento das fontes de dados
-
-O projeto utiliza fontes locais e sintéticas, adequadas para um case de portfólio.
+Comecei identificando quais informações estavam disponíveis e em qual formato.
 
 | Fonte | Formato | Conteúdo | Conector utilizado |
 |---|---|---|---|
@@ -14,29 +12,15 @@ O projeto utiliza fontes locais e sintéticas, adequadas para um case de portfó
 | Base de interações | CSV UTF-8 (`.csv`) | contatos, motivos, canais e satisfação | `Csv.Document` + `File.Contents` |
 | Dimensões auxiliares | CSV UTF-8 (`.csv`) | motivos e atributos complementares | `Csv.Document` + `File.Contents` |
 
-### Por que esses conectores foram escolhidos?
-
-- são adequados ao formato real das fontes do exercício;
-- permitem importar e transformar os dados diretamente no Power Query;
-- mantêm o projeto simples e reproduzível para fins de portfólio.
-
-### Como seria em um ambiente produtivo?
-
-Arquivos locais não são a melhor opção para atualização em tempo real. Em produção, a solução poderia utilizar:
-
-- banco de dados SQL;
-- data warehouse ou lakehouse;
-- SharePoint ou OneDrive;
-- parâmetros de ambiente;
-- gateway e atualização agendada no Power BI Service.
-
-A escolha final dependeria do volume, frequência de atualização, segurança e arquitetura disponível.
+Essa primeira leitura mostrou que a base logística seria a principal fonte para acompanhar prazo, atraso e lead time, enquanto os registros de contato complementariam a análise com informações sobre os motivos relatados e a satisfação dos clientes.
 
 ## 2. Tratamento dos dados no Power Query
 
+Com as fontes mapeadas, passei para a etapa de limpeza e transformação.
+
 ### Base de entregas
 
-As principais transformações realizadas foram:
+Na base logística, organizei a sequência de tratamento da seguinte forma:
 
 1. importação da planilha `Logistica`;
 2. promoção da primeira linha para cabeçalhos;
@@ -44,11 +28,11 @@ As principais transformações realizadas foram:
 4. conversão das datas usando a localidade `pt-BR`;
 5. criação de uma chave técnica `ID_Entrega`;
 6. cálculo do lead time;
-7. cálculo do desvio entre data prevista e data realizada;
+7. cálculo do desvio entre a data prevista e a data realizada;
 8. validação automática do status da entrega;
 9. comparação entre o status original e o status recalculado.
 
-### Colunas criadas
+Durante esse processo, criei colunas que permitiram transformar as datas em informações úteis para análise.
 
 ```powerquery
 Lead_Time_Dias = Duration.Days([Data_Entrega_Realizada] - [Data_Pedido])
@@ -70,26 +54,22 @@ Status_Consistente =
 if [Status_Entrega] = [Status_Validado] then "Sim" else "Não"
 ```
 
+A criação do `Status_Validado` foi importante porque passou a classificar cada entrega com base nas datas, sem depender apenas do status informado originalmente.
+
 ### Base de interações
 
-Na base de interações foram aplicadas:
+Na base de interações, fiz a promoção dos cabeçalhos, defini os tipos de texto, número, data e data/hora, configurei a leitura em UTF-8 e padronizei os campos de canal, motivo e satisfação.
 
-- promoção dos cabeçalhos;
-- definição dos tipos de texto, número, data e data/hora;
-- configuração UTF-8 para preservar caracteres;
-- padronização de canal, motivo e status;
-- preparação dos campos utilizados nas análises de satisfação.
+Depois do tratamento, as duas bases estavam prontas para serem conectadas no modelo.
 
-## 3. Modelagem de dados
+## 3. Construção do modelo de dados
 
-O projeto utiliza um **modelo dimensional em constelação de fatos**, aplicando princípios de star schema.
-
-### Tabelas fato
+Na etapa seguinte, organizei o modelo com duas tabelas fato:
 
 - `Fato_Entregas`: uma linha por entrega;
 - `Fato_Interacoes`: uma linha por registro de contato.
 
-### Dimensões
+As tabelas de dimensão passaram a organizar os filtros usados no relatório:
 
 - `Dim_Calendario`;
 - `Dim_Motivos`;
@@ -97,33 +77,28 @@ O projeto utiliza um **modelo dimensional em constelação de fatos**, aplicando
 - `Dim_Equipe_Atendimento`;
 - dimensões auxiliares do modelo.
 
-### Cardinalidade e direção de filtro
-
 Os relacionamentos principais seguem o padrão:
 
 ```text
 Dimensão (1) ───────── (*) Tabela fato
 ```
 
-- cardinalidade **um para muitos**;
-- direção de filtro única, da dimensão para a fato;
-- ausência de relacionamento muitos para muitos no modelo principal;
-- tabelas fato não são conectadas diretamente entre si.
+A cardinalidade é um para muitos, com direção de filtro da dimensão para a tabela fato. As tabelas fato não foram conectadas diretamente entre si.
 
 ### Relacionamentos de data
 
-A dimensão calendário possui diferentes papéis:
+A mesma entrega possui diferentes datas importantes. Por isso, a `Dim_Calendario` foi relacionada com:
 
 - `Data_Pedido` — relacionamento ativo;
 - `Data_Entrega_Realizada` — relacionamento inativo;
 - `Data_Entrega_Prevista` — relacionamento inativo;
 - `Data_Contato` — relacionamento ativo com a tabela de interações.
 
-Os relacionamentos inativos são acionados nas medidas com `USERELATIONSHIP`, permitindo analisar o mesmo indicador por diferentes perspectivas de data sem duplicar a tabela calendário.
+Para analisar entregas pela data realizada ou prevista, utilizei `USERELATIONSHIP` dentro das medidas.
 
-## 4. Medidas DAX
+## 4. Criação das medidas DAX
 
-Os KPIs foram criados como **medidas**, e não como colunas calculadas, porque precisam responder dinamicamente aos filtros de período, equipe, canal e demais dimensões.
+Com o modelo pronto, criei medidas para responder às perguntas do projeto e reagir aos filtros do relatório.
 
 ### Total de entregas
 
@@ -142,7 +117,7 @@ CALCULATE(
 )
 ```
 
-`CALCULATE` modifica o contexto de filtro para considerar somente as entregas classificadas como atrasadas.
+Nesta medida, `CALCULATE` altera o contexto para considerar apenas as entregas classificadas como atrasadas.
 
 ### Taxa de atraso
 
@@ -154,8 +129,6 @@ DIVIDE(
     0
 )
 ```
-
-`DIVIDE` foi utilizado em vez do operador `/` para tratar divisões por zero de forma segura.
 
 ### Taxa de cumprimento do prazo
 
@@ -188,7 +161,7 @@ CALCULATE(
 )
 ```
 
-Essa medida ativa temporariamente o relacionamento entre a data realizada e a dimensão calendário.
+Essa medida permite analisar o volume pela data em que a entrega realmente aconteceu.
 
 ### Satisfação do cliente
 
@@ -203,54 +176,32 @@ DIVIDE(
 
 A medida considera somente as pesquisas respondidas no denominador.
 
-### Boas práticas aplicadas
-
-- nomes descritivos para medidas e colunas;
-- medidas concentradas em uma tabela específica;
-- uso de `DIVIDE` para cálculos de taxa;
-- uso de `CALCULATE` para alteração do contexto de filtro;
-- uso de `USERELATIONSHIP` para análises temporais;
-- uso de variáveis apenas quando aumentam a legibilidade de medidas com múltiplas etapas;
-- preferência por medidas em vez de colunas calculadas para agregações dinâmicas.
-
 ## 5. Construção do dashboard
 
-A página executiva foi desenhada para responder rapidamente às perguntas do negócio.
+Depois de validar os cálculos, organizei a página executiva para conduzir a leitura em uma sequência simples.
 
-### Decisões de visualização
+No topo, coloquei os principais indicadores para oferecer uma visão geral rápida. Em seguida, usei um gráfico de linha para mostrar a evolução mensal da taxa de atraso. Os motivos de contato foram apresentados em barras horizontais, facilitando a comparação entre categorias. Por fim, a satisfação foi comparada por situação da entrega para mostrar a diferença entre pedidos atrasados e cumpridos.
 
-| Elemento | Escolha | Justificativa |
+| Elemento | Visual escolhido | Papel na narrativa |
 |---|---|---|
-| KPIs no topo | cartões | leitura rápida dos principais resultados |
-| Evolução mensal | gráfico de linha | evidencia tendência, picos e mudanças ao longo do tempo |
-| Motivos de contato | barras horizontais | facilita comparar categorias e nomes mais longos |
-| Satisfação por status | colunas comparativas | torna visível a diferença entre entregas atrasadas e cumpridas |
-| Filtros | poucos e relevantes | evita poluição visual e mantém a análise objetiva |
+| Indicadores principais | cartões | apresentar o cenário geral |
+| Evolução mensal | gráfico de linha | mostrar tendência e períodos críticos |
+| Motivos de contato | barras horizontais | comparar as categorias mais frequentes |
+| Satisfação por status | colunas comparativas | relacionar atraso e experiência do cliente |
+| Filtros | poucos e relevantes | permitir recortes sem poluir a página |
 
-A hierarquia visual segue a sequência:
+A leitura do dashboard segue esta ordem:
 
 ```text
-Visão geral → evolução → causas principais → impacto na satisfação
+Visão geral → evolução dos atrasos → motivos de contato → impacto na satisfação
 ```
 
-## 6. Entregáveis técnicos
+## 6. Arquivos do projeto
 
 | Entregável | Finalidade | Status |
 |---|---|---|
-| Arquivo `.pbix` | produto final para abertura direta no Power BI Desktop | será publicado após a revisão final |
-| Projeto `.pbip` | estrutura aberta do relatório e do modelo semântico | preparado para publicação |
-| Imagens/PDF | visualização por pessoas sem Power BI Desktop | em preparação |
+| Arquivo `.pbix` | abertura direta no Power BI Desktop | será publicado após a revisão final |
+| Projeto `.pbip` | estrutura do relatório e do modelo semântico | preparado para publicação |
+| Imagens/PDF | visualização do dashboard sem Power BI Desktop | em preparação |
 | Dicionário de dados | descrição dos campos e regras | disponível na estrutura do projeto |
-| Documentação técnica | fontes, Power Query, modelo, DAX e design | disponível neste repositório |
-
-## 7. O que este case demonstra
-
-- capacidade de mapear fontes de dados;
-- tratamento e validação no Power Query;
-- modelagem dimensional;
-- compreensão de cardinalidade e direção de filtro;
-- criação de medidas DAX;
-- seleção de visualizações adequadas;
-- tradução de um problema de negócio em um dashboard funcional.
-
-A apresentação executiva continuará curta, com três insights. Esta documentação funciona como a evidência técnica para quem desejar aprofundar a avaliação do projeto.
+| Documentação técnica | registro das etapas de construção | disponível neste repositório |
