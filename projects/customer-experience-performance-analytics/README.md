@@ -1,6 +1,6 @@
 # Logistics Customer Experience Analytics
 
-**Case 02 — Análise de desempenho logístico e experiência do cliente**
+**Case 02 — Power BI aplicado ao desempenho logístico e à experiência do cliente**
 
 <div align="center">
   <img src="../../assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
@@ -16,51 +16,16 @@
   </a>
 </div>
 
-## Contexto do problema
+## O problema
 
-Uma empresa de logística está enfrentando atrasos nas entregas e aumento nas reclamações dos clientes.
+Uma empresa de logística precisava entender onde os atrasos estavam concentrados e como o desempenho das entregas se relacionava com a satisfação do cliente.
 
-Os dados existem em fontes diferentes, dificultando uma visão clara sobre:
-
-- onde os atrasos estão concentrados;
-- quais motivos aparecem com maior frequência;
-- como o desempenho da entrega afeta a satisfação;
-- quais pontos devem ser priorizados pela gestão.
-
-## Pergunta de negócio
-
-> Onde estão concentrados os atrasos e como o desempenho das entregas afeta a experiência do cliente?
-
-## Objetivo do projeto
-
-Construir uma análise em Power BI capaz de:
-
-1. acompanhar o desempenho das entregas;
-2. relacionar atrasos com satisfação e motivos de contato;
-3. transformar os resultados em três insights e recomendações objetivas.
-
-## Escopo da base sintética
-
-O modelo contém:
+A análise reuniu duas fontes sintéticas:
 
 - **53.770 entregas**;
-- **16.318 interações de clientes**;
-- datas de pedido, previsão e entrega;
-- status da entrega e dias de atraso;
-- canal e motivo do contato;
-- indicador de satisfação;
-- informações de cidade, equipe e período.
+- **16.318 registros de contato**.
 
-A base foi gerada programaticamente para criar um cenário plausível de análise, sem representar uma empresa real.
-
-## Indicadores principais
-
-| Indicador | Resultado |
-|---|---:|
-| Entregas analisadas | 53.770 |
-| Cumprimento do prazo | 87,02% |
-| Taxa de atraso | 12,98% |
-| Satisfação do cliente | 64,02% |
+> **Pergunta central:** onde estão os principais atrasos e qual é o impacto percebido pelo cliente?
 
 ## Dashboard final
 
@@ -68,77 +33,32 @@ A base foi gerada programaticamente para criar um cenário plausível de anális
   <img src="../../assets/logistics-customer-experience-dashboard-final.svg" alt="Dashboard Logistics Customer Experience Analytics" width="100%">
 </div>
 
-## Principais insights
+## Principais resultados
 
-**1. A taxa de atraso apresentou oscilações relevantes ao longo do período**, ultrapassando 20% no momento mais crítico.
-
-**2. Atraso na entrega foi o principal motivo de contato dos clientes**, com aproximadamente 3,8 mil registros.
-
-**3. A satisfação caiu para 52,99% nas entregas atrasadas**, enquanto permaneceu acima de 73% nas entregas realizadas no prazo ou antecipadamente.
+- **87,02%** das entregas foram concluídas no prazo ou antecipadamente;
+- a taxa geral de atraso foi de **12,98%**;
+- atraso na entrega foi o principal motivo de contato, com cerca de **3,8 mil registros**;
+- a satisfação caiu para **52,99%** nas entregas atrasadas, contra mais de **73%** nas entregas cumpridas.
 
 ## Recomendações
 
-- acompanhar mensalmente a taxa de atraso e investigar aumentos fora do padrão;
-- priorizar ações sobre as causas que geram atrasos e contatos dos clientes;
-- adotar comunicação proativa quando houver risco de descumprimento do prazo.
+- acompanhar a taxa de atraso mensalmente e investigar aumentos fora do padrão;
+- priorizar as causas que concentram atrasos e contatos dos clientes;
+- comunicar o cliente de forma proativa quando houver risco de descumprimento do prazo.
 
-## Como construí a solução
+## Construção técnica
 
-Depois de definir o problema, comecei mapeando as fontes disponíveis. A base logística estava em Excel e reunia pedidos, datas, equipes, canais e status de entrega. Os registros de contato e as dimensões auxiliares estavam em arquivos CSV.
+As fontes em Excel e CSV foram tratadas no **Power Query**, com correção de tipos e localidade das datas, criação de chave técnica e cálculo de lead time, desvio de prazo e status validado.
 
-```text
-Fontes de dados
-      ↓
-Tratamento no Power Query
-      ↓
-Modelo dimensional
-      ↓
-Medidas DAX
-      ↓
-Dashboard em Power BI
-```
+O modelo conecta duas tabelas fato — `Fato_Entregas` e `Fato_Interacoes` — às dimensões de calendário, motivos, canais, equipes e agentes. Os relacionamentos principais seguem cardinalidade **um para muitos**.
 
-### Tratamento no Power Query
-
-Na base de entregas, corrigi os tipos e a localidade das datas, criei uma chave técnica e calculei o lead time e o desvio entre a data prevista e a data realizada.
-
-A partir desse desvio, criei um status validado:
-
-```powerquery
-Status_Validado =
-if [Desvio_Prazo_Dias] < 0 then "Antecipado"
-else if [Desvio_Prazo_Dias] = 0 then "No Prazo"
-else "Atrasado"
-```
-
-Também comparei o status original com o status recalculado para identificar possíveis inconsistências. Na base de interações, padronizei os campos de data, canal, motivo e satisfação.
-
-### Modelagem dos dados
-
-Com as bases tratadas, organizei o modelo com duas tabelas fato:
-
-- `Fato_Entregas`: informações sobre prazo, status e atraso;
-- `Fato_Interacoes`: registros de contato e satisfação do cliente.
-
-As dimensões organizam calendário, motivo, canal, cidade e equipe. Os relacionamentos principais utilizam cardinalidade **um para muitos**, com direção de filtro da dimensão para a tabela fato.
-
-A `Dim_Calendario` possui um relacionamento ativo com `Data_Pedido` e relacionamentos inativos com as datas prevista e realizada. Quando precisei analisar a entrega pela data em que ela realmente ocorreu, usei `USERELATIONSHIP` nas medidas.
+### Modelo de dados no Power BI
 
 <div align="center">
-  <img src="../../assets/customer-experience-data-model.svg" alt="Modelo de dados do Case 02" width="100%">
+  <img src="../../assets/customer-experience-data-model.svg" alt="Modelo de dados construído no Power BI" width="100%">
 </div>
 
-### Medidas DAX
-
-Com o modelo pronto, criei as medidas que alimentam o dashboard.
-
-```DAX
-Entregas Atrasadas =
-CALCULATE(
-    [Total Entregas],
-    Fato_Entregas[Status_Validado] = "Atrasado"
-)
-```
+### Exemplos de medidas DAX
 
 ```DAX
 Taxa de Atraso =
@@ -160,29 +80,12 @@ CALCULATE(
 )
 ```
 
-[Ver a construção técnica completa](docs/technical-implementation.md)
-
-## Como organizei a análise no dashboard
-
-Depois de validar os cálculos, organizei a página para conduzir a leitura do cenário geral até o impacto percebido pelo cliente:
-
-1. **visão geral**, com os principais indicadores de entrega;
-2. **evolução dos atrasos**, para identificar tendências e períodos críticos;
-3. **motivos de contato**, para entender quais problemas aparecem com maior frequência;
-4. **satisfação por situação da entrega**, para comparar pedidos atrasados e cumpridos.
-
-Essa sequência permite começar pelo desempenho logístico, avançar para os principais problemas relatados e terminar mostrando como o atraso se relaciona com a satisfação do cliente.
-
-## Documentação complementar
+## Documentação técnica
 
 - [Problema de negócio e metodologia](docs/business-problem-and-methodology.md)
 - [Modelo e indicadores](docs/model-metrics-and-rules.md)
-- [Como construí a solução](docs/technical-implementation.md)
+- [Implementação técnica](docs/technical-implementation.md)
 
-## Premissas e limitações
+## Limitações
 
-- os dados são totalmente sintéticos;
-- os resultados não representam uma empresa real;
-- a satisfação é baseada apenas nas respostas disponíveis;
-- associações entre atraso e satisfação não comprovam causalidade;
-- o projeto demonstra método analítico, modelagem e visualização de dados.
+Os dados são sintéticos e não representam uma empresa real. A relação entre atraso e satisfação indica associação, não causalidade.
