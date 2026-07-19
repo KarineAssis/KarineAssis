@@ -33,18 +33,10 @@ Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KP
   <img src="assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
 </a>
 
-Case de uma empresa de logística com problemas de atraso e impacto na experiência do cliente.
+Case em Power BI que conecta desempenho de entregas, motivos de contato e satisfação do cliente.
 
-O projeto conecta dados de entregas e registros de contato para identificar onde os atrasos estão concentrados, quais motivos aparecem com maior frequência e como o desempenho logístico afeta a satisfação.
-
-**Foco técnico:** Power BI, Power Query, modelo dimensional, DAX, visualização e comunicação executiva.
-
-**Evidências técnicas documentadas:** fontes e conectores, transformações no Power Query, cardinalidade e direção dos relacionamentos, medidas DAX e justificativa das escolhas visuais.
-
-- 53.770 entregas analisadas
-- 87,02% de cumprimento do prazo
-- 12,98% de taxa de atraso
-- 64,02% de satisfação do cliente
+**Power Query · Modelo dimensional · DAX · Data Visualization**  
+**53.770 entregas · 87,02% de cumprimento · 12,98% de atraso · 64,02% de satisfação**
 
 [Ver o case](projects/customer-experience-performance-analytics/README.md) · [Ver a implementação técnica](projects/customer-experience-performance-analytics/docs/technical-implementation.md)
 
@@ -54,16 +46,10 @@ O projeto conecta dados de entregas e registros de contato para identificar onde
   <img src="https://raw.githubusercontent.com/KarineAssis/sim-mobile-case-study/main/assets/project-cover.svg" alt="SIM Mobile - Transformação digital na captura de dados operacionais" width="100%">
 </a>
 
-Case de transformação digital aplicado à captura de dados em ambiente industrial. A iniciativa aproximou o registro do local de execução, melhorou a disponibilidade das informações operacionais e criou uma base mais favorável para análises confiáveis e tomada de decisão.
+Case de transformação digital em manutenção industrial, aproximando o registro das atividades do local de execução.
 
-**Minha atuação:** diagnóstico do processo, jornada do usuário, requisitos funcionais, alinhamento com TI, testes, piloto, implantação, acompanhamento da adoção e definição de oportunidades analíticas.
-
-- 5+ fluxos mobile disponibilizados
-- 148 usuários habilitados até outubro de 2022
-- 3 unidades brasileiras acompanhadas
-- implantação iniciada em 2021
-
-> Usuários habilitados não equivalem necessariamente a usuários ativos. O case explicita as limitações dos dados e evita atribuir resultados não comprovados.
+**Minha atuação:** diagnóstico do processo, requisitos funcionais, testes, piloto, implantação e acompanhamento da adoção.  
+**5+ fluxos mobile · 148 usuários habilitados · 3 unidades · início em 2021**
 
 [Ver o repositório do projeto](https://github.com/KarineAssis/sim-mobile-case-study)
 
