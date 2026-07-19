@@ -1,0 +1,51 @@
+downtime_id,machine_id,failure_id,downtime_start,downtime_end,planned_flag,downtime_reason
+1,TIN-008,1,2024-01-01 20:15:00,2024-01-02 00:46:01,false,Desgaste excessivo do rolamento
+2,TIN-008,2,2024-01-02 07:31:39,2024-01-02 12:43:43,false,Falha de acionamento do contator
+3,ACA-012,3,2024-01-06 07:19:21,2024-01-06 12:07:40,false,Rompimento ou desalinhamento da correia
+4,TIN-002,4,2024-01-07 13:46:31,2024-01-08 04:53:34,false,Vibração elevada no conjunto do eixo
+5,ACA-008,5,2024-01-08 10:38:53,2024-01-08 22:39:17,false,Falha de acionamento do contator
+6,TIN-007,6,2024-01-08 10:51:37,2024-01-08 17:56:23,false,Parâmetro operacional fora da faixa
+7,TEC-012,7,2024-01-09 04:37:29,2024-01-09 10:00:47,false,Rompimento ou desalinhamento da correia
+8,TIN-010,8,2024-01-11 22:24:59,2024-01-12 00:46:18,false,Travamento de válvula hidráulica
+9,FIA-006,9,2024-01-16 01:19:50,2024-01-17 01:49:19,false,Leitura instável do sensor
+10,ACA-012,11,2024-01-19 13:43:10,2024-01-19 19:18:14,false,Folga ou desalinhamento do acoplamento
+11,TEC-015,,2024-01-21 09:21:38,2024-01-21 10:40:10,true,Inspeção preventiva programada
+12,FIA-002,,2024-01-26 17:08:34,2024-01-26 23:30:04,true,Inspeção preventiva programada
+13,FIA-004,14,2024-01-31 05:24:32,2024-02-01 00:43:19,false,Folga ou desalinhamento do acoplamento
+14,TEC-020,16,2024-02-01 21:35:02,2024-02-02 03:05:29,false,Ruído e aquecimento anormal no redutor
+15,ACA-002,,2024-02-02 12:34:19,2024-02-02 17:26:23,true,Inspeção preventiva programada
+16,ACA-008,17,2024-02-02 20:34:16,2024-02-03 14:37:28,false,Alarme no inversor de frequência
+17,TEC-016,19,2024-02-04 04:55:33,2024-02-04 09:31:15,false,Válvula pneumática sem resposta
+18,ACA-006,20,2024-02-04 05:50:12,2024-02-04 12:28:37,false,Rompimento ou desalinhamento da correia
+19,FIA-008,22,2024-02-05 05:19:32,2024-02-06 18:40:50,false,Interrupção na alimentação de material
+20,TIN-005,23,2024-02-05 06:38:27,2024-02-05 13:42:18,false,Vibração elevada no conjunto do eixo
+21,ACA-004,24,2024-02-05 16:10:15,2024-02-06 07:34:25,false,Parâmetro operacional fora da faixa
+22,FIA-009,25,2024-02-05 21:29:10,2024-02-06 03:03:30,false,Ruído e aquecimento anormal no redutor
+23,TEC-020,26,2024-02-06 09:58:58,2024-02-06 17:00:17,false,Falha durante ajuste ou troca de artigo
+24,TIN-009,27,2024-02-07 09:32:01,2024-02-08 12:54:19,false,Alarme no inversor de frequência
+25,FIA-009,28,2024-02-09 07:21:03,2024-02-09 13:25:17,false,Ruído e aquecimento anormal no redutor
+26,FIA-005,31,2024-02-16 12:51:35,2024-02-16 21:42:34,false,Ruído e aquecimento anormal no redutor
+27,FIA-010,33,2024-02-18 01:24:33,2024-02-19 22:15:39,false,Mau contato em cabo de potência
+28,TIN-008,34,2024-02-19 21:18:45,2024-02-20 03:57:18,false,Mau contato em cabo de potência
+29,FIA-009,,2024-02-20 02:38:16,2024-02-20 04:03:45,true,Inspeção preventiva programada
+30,TEC-007,36,2024-02-23 10:21:46,2024-02-23 15:45:29,false,Vazamento no circuito hidráulico
+31,ACA-001,38,2024-02-26 08:18:06,2024-02-27 22:59:46,false,Vibração elevada no conjunto do eixo
+32,ACA-004,40,2024-02-27 10:48:36,2024-02-27 16:29:40,false,Alarme no inversor de frequência
+33,FIA-011,42,2024-02-28 07:18:38,2024-02-28 12:23:06,false,Ruído e aquecimento anormal no redutor
+34,ACA-005,45,2024-03-03 14:48:29,2024-03-03 19:41:07,false,Leitura instável do sensor
+35,TEC-009,46,2024-03-04 09:14:08,2024-03-04 11:01:48,false,Sobrecorrente no motor elétrico
+36,TIN-005,47,2024-03-06 04:53:38,2024-03-06 23:29:21,false,Falha de comunicação com o CLP
+37,TIN-008,,2024-03-06 17:11:10,2024-03-06 21:28:29,true,Limpeza técnica
+38,ACA-015,,2024-03-11 16:49:27,2024-03-11 23:56:50,true,Inspeção preventiva programada
+39,ACA-014,51,2024-03-12 06:29:13,2024-03-12 12:33:52,false,Falha de comunicação com o CLP
+40,ACA-007,52,2024-03-15 01:40:24,2024-03-15 09:37:53,false,Baixa pressão no circuito hidráulico
+41,FIA-006,53,2024-03-15 05:41:04,2024-03-15 12:54:57,false,Alarme no inversor de frequência
+42,TEC-004,54,2024-03-15 12:00:08,2024-03-15 20:56:54,false,Vibração elevada no conjunto do eixo
+43,FIA-007,55,2024-03-16 00:05:29,2024-03-16 08:23:22,false,Perda de referência do encoder
+44,FIA-008,56,2024-03-16 02:16:24,2024-03-16 10:21:17,false,Mau contato em cabo de potência
+45,TIN-007,57,2024-03-16 02:40:03,2024-03-16 17:14:13,false,Folga ou desalinhamento do acoplamento
+46,ACA-015,58,2024-03-17 10:38:31,2024-03-18 04:09:49,false,Folga ou desalinhamento do acoplamento
+47,TEC-020,61,2024-03-19 10:35:53,2024-03-19 20:16:55,false,Perda de força no cilindro pneumático
+48,ACA-007,,2024-03-20 08:41:32,2024-03-20 10:19:21,true,Ajuste e calibração
+49,TEC-020,63,2024-03-20 16:24:40,2024-03-20 21:33:12,false,Leitura instável do sensor
+50,FIA-014,,2024-03-21 20:25:55,2024-03-21 23:35:56,true,Limpeza técnica
