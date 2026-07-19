@@ -27,6 +27,19 @@ Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KP
 
 ## Projetos selecionados
 
+### [SQL Maintenance Analytics](projects/sql-maintenance-analytics/README.md)
+
+<a href="projects/sql-maintenance-analytics/README.md">
+  <img src="assets/sql-maintenance-analytics-preview.svg" alt="SQL Maintenance Analytics" width="100%">
+</a>
+
+Case em PostgreSQL que organiza dados de manutenção de uma indústria têxtil fictícia e analisa falhas, custos, preventivas e produção.
+
+**SQL · PostgreSQL · Banco relacional · JOINs e agregações**  
+**48.144 registros · 60 máquinas · 720 falhas · 1.500 ordens de manutenção**
+
+[Ver o case](projects/sql-maintenance-analytics/README.md) · [Ver as consultas principais](projects/sql-maintenance-analytics/sql/10_project_summary.sql)
+
 ### [Logistics Customer Experience Analytics](projects/customer-experience-performance-analytics/README.md)
 
 <a href="projects/customer-experience-performance-analytics/README.md">
