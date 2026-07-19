@@ -12,16 +12,16 @@ Uma indústria têxtil fictícia precisava organizar seus dados de manutenção 
 
 A análise reuniu informações de quatro setores produtivos — **Fiação, Tecelagem, Tingimento e Acabamento** — em um banco relacional no PostgreSQL.
 
-> **Pergunta central:** como os dados de máquinas, falhas, ordens de manutenção, paradas, preventivas e produção podem apoiar a priorização das ações de manutenção?
+> **Pergunta central:** Como os dados de máquinas, falhas, ordens de manutenção, paradas, preventivas e produção apoiam a priorização das ações de manutenção?
 
 ## Escopo dos dados
 
 A base representa dois anos de operação, entre janeiro de 2024 e dezembro de 2025.
 
-| Informação | Quantidade |
+| Base analisada | Quantidade |
 |---|---:|
-| Setores | 4 |
-| Máquinas | 60 |
+| Setores produtivos | 4 |
+| Máquinas cadastradas | 60 |
 | Eventos de falha | 720 |
 | Ordens de manutenção | 1.500 |
 | Eventos de parada | 600 |
@@ -102,6 +102,16 @@ GROUP BY
 ORDER BY
     total_failures DESC;
 ```
+
+### Evidência da execução no pgAdmin
+
+A consulta foi executada diretamente no PostgreSQL por meio do pgAdmin. A captura registra o código selecionado e o resultado retornado pelo banco.
+
+<div align="center">
+  <img src="assets/pgadmin-failures-by-sector.svg" alt="Consulta de falhas por setor executada no pgAdmin" width="100%">
+</div>
+
+As tabelas a seguir apresentam uma síntese editorial dos resultados, enquanto a captura acima documenta a execução real da consulta.
 
 ## Principais resultados
 
