@@ -183,9 +183,27 @@ A Tecelagem apresentou a maior produção e também o maior volume absoluto de r
 
 ## Arquivos do projeto
 
-- [`10_project_summary.sql`](sql/10_project_summary.sql) — consultas utilizadas para consolidar os principais resultados.
+### Scripts SQL
 
-Os demais scripts e arquivos de dados serão adicionados à medida que a documentação do projeto for consolidada.
+1. [`01_create_tables.sql`](sql/01_create_tables.sql) — criação do schema, tabelas, restrições e índices;
+2. [`02_validate_data.sql`](sql/02_validate_data.sql) — validação das quantidades importadas;
+3. [`03_machine_sector_join.sql`](sql/03_machine_sector_join.sql) — relacionamento entre máquinas e setores;
+4. [`04_basic_analysis.sql`](sql/04_basic_analysis.sql) — análises iniciais do cadastro de máquinas;
+5. [`05_failure_analysis.sql`](sql/05_failure_analysis.sql) — análise de falhas e severidade;
+6. [`06_maintenance_orders_analysis.sql`](sql/06_maintenance_orders_analysis.sql) — ordens e custos de manutenção;
+7. [`07_downtime_analysis.sql`](sql/07_downtime_analysis.sql) — paradas e horas de indisponibilidade;
+8. [`08_preventive_maintenance_analysis.sql`](sql/08_preventive_maintenance_analysis.sql) — execução e pendências das preventivas;
+9. [`09_production_analysis.sql`](sql/09_production_analysis.sql) — produção, horas operacionais e refugo;
+10. [`10_project_summary.sql`](sql/10_project_summary.sql) — consultas utilizadas para consolidar os principais resultados.
+
+### Dados
+
+- [`data/README.md`](data/README.md) — documentação da base e dos volumes utilizados;
+- [`01_sectors.csv`](data/01_sectors.csv) — cadastro completo de setores;
+- [`02_machines.csv`](data/02_machines.csv) — cadastro completo de máquinas;
+- [`data/samples`](data/samples/) — amostras das tabelas de maior volume.
+
+Os resultados apresentados foram calculados sobre a base completa importada no PostgreSQL. As amostras publicadas permitem visualizar a estrutura dos dados sem tornar o repositório excessivamente pesado.
 
 ## Limitações e próximos passos
 
