@@ -1,0 +1,51 @@
+preventive_id,machine_id,activity_name,planned_date,execution_date,preventive_status
+1,TEC-004,Lubrificar mecanismos,2024-01-02,2024-01-01,No prazo
+2,FIA-003,Inspecionar fusos,2024-01-04,2024-01-01,No prazo
+3,TEC-015,Inspecionar cilindros,2024-01-04,2024-01-01,No prazo
+4,TEC-019,Lubrificar mecanismos,2024-01-04,2024-01-04,No prazo
+5,ACA-002,Lubrificar mancais,2024-01-05,2024-01-02,No prazo
+6,TIN-005,Inspecionar cilindros,2024-01-05,2024-01-02,No prazo
+7,FIA-005,Lubrificar mancais,2024-01-05,,Pendente
+8,TIN-001,Calibrar temperatura,2024-01-06,2024-01-04,No prazo
+9,FIA-004,Verificar correias,2024-01-06,,Pendente
+10,TIN-005,Verificar pressão,2024-01-07,2024-01-13,Atrasada
+11,TEC-016,Lubrificar mecanismos,2024-01-07,2024-01-05,No prazo
+12,FIA-015,Inspecionar fusos,2024-01-08,2024-01-05,No prazo
+13,TEC-016,Verificar sensores de trama,2024-01-08,2024-01-06,No prazo
+14,TEC-001,Lubrificar mecanismos,2024-01-08,2024-01-06,No prazo
+15,TEC-010,Inspecionar pinças,2024-01-09,2024-01-09,No prazo
+16,ACA-011,Calibrar pressão,2024-01-09,2024-01-07,No prazo
+17,TEC-005,Verificar freios,2024-01-09,2024-01-06,No prazo
+18,FIA-004,Verificar correias,2024-01-10,2024-01-08,No prazo
+19,ACA-014,Lubrificar mancais,2024-01-10,2024-01-09,No prazo
+20,TEC-010,Verificar sensores de trama,2024-01-10,2024-01-09,No prazo
+21,ACA-005,Inspecionar queimadores,2024-01-10,2024-01-09,No prazo
+22,FIA-001,Inspecionar guarnições,2024-01-11,2024-01-08,No prazo
+23,TEC-015,Inspecionar cilindros,2024-01-11,2024-01-26,Atrasada
+24,TIN-010,Calibrar temperatura,2024-01-11,2024-01-08,No prazo
+25,TIN-002,Inspecionar cilindros,2024-01-12,2024-01-10,No prazo
+26,ACA-001,Lubrificar guias,2024-01-13,2024-01-10,No prazo
+27,TEC-005,Verificar freios,2024-01-13,2024-01-27,Atrasada
+28,TEC-005,Verificar freios,2024-01-13,2024-01-10,No prazo
+29,ACA-015,Verificar feltro,2024-01-14,2024-01-13,No prazo
+30,TEC-020,Calibrar tensão,2024-01-14,2024-01-13,No prazo
+31,TEC-014,Inspecionar roletes,2024-01-14,2024-01-14,No prazo
+32,FIA-005,Verificar transmissão,2024-01-14,2024-01-13,No prazo
+33,FIA-010,Inspecionar correias,2024-01-14,2024-01-14,No prazo
+34,TEC-001,Inspecionar pinças,2024-01-15,,Pendente
+35,FIA-014,Inspecionar correias,2024-01-16,2024-01-16,No prazo
+36,TEC-014,Verificar freios,2024-01-16,2024-01-15,No prazo
+37,TEC-010,Lubrificar mecanismos,2024-01-16,,Pendente
+38,FIA-005,Verificar transmissão,2024-01-16,2024-01-13,No prazo
+39,TEC-009,Inspecionar cilindros,2024-01-16,2024-01-13,No prazo
+40,TIN-001,Calibrar temperatura,2024-01-16,2024-01-15,No prazo
+41,FIA-003,Inspecionar fusos,2024-01-16,2024-01-15,No prazo
+42,ACA-008,Inspecionar roletes,2024-01-16,2024-01-17,Atrasada
+43,TEC-019,Inspecionar pinças,2024-01-17,2024-01-22,Atrasada
+44,FIA-008,Limpar sensores,2024-01-18,2024-01-18,No prazo
+45,TEC-013,Inspecionar pinças,2024-01-19,,Pendente
+46,TIN-002,Lubrificar mancais,2024-01-19,2024-01-19,No prazo
+47,FIA-010,Verificar sensores,2024-01-19,2024-01-16,No prazo
+48,TEC-007,Verificar sensores de trama,2024-01-21,2024-01-21,No prazo
+49,FIA-005,Inspecionar guarnições,2024-01-21,2024-01-21,No prazo
+50,TEC-013,Verificar sensores de trama,2024-01-23,2024-01-25,Atrasada
