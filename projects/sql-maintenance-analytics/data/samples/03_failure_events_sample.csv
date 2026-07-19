@@ -1,0 +1,51 @@
+failure_id,machine_id,failure_datetime,failure_category,component,severity,failure_description
+1,TIN-008,2024-01-01 20:15:00,Mecânica,Rolamento,1,Desgaste excessivo do rolamento
+2,TIN-008,2024-01-02 07:31:39,Elétrica,Contator,2,Falha de acionamento do contator
+3,ACA-012,2024-01-06 07:19:21,Mecânica,Correia,2,Rompimento ou desalinhamento da correia
+4,TIN-002,2024-01-07 13:46:31,Mecânica,Eixo,4,Vibração elevada no conjunto do eixo
+5,ACA-008,2024-01-08 10:38:53,Elétrica,Contator,4,Falha de acionamento do contator
+6,TIN-007,2024-01-08 10:51:37,Operacional,Ajuste de processo,3,Parâmetro operacional fora da faixa
+7,TEC-012,2024-01-09 04:37:29,Mecânica,Correia,3,Rompimento ou desalinhamento da correia
+8,TIN-010,2024-01-11 22:24:59,Hidráulica,Válvula hidráulica,2,Travamento de válvula hidráulica
+9,FIA-006,2024-01-16 01:19:50,Automação,Sensor,5,Leitura instável do sensor
+10,TEC-004,2024-01-17 21:49:50,Elétrica,Motor,3,Sobrecorrente no motor elétrico
+11,ACA-012,2024-01-19 13:43:10,Mecânica,Acoplamento,3,Folga ou desalinhamento do acoplamento
+12,TIN-006,2024-01-25 12:31:01,Elétrica,Motor,2,Sobrecorrente no motor elétrico
+13,FIA-011,2024-01-30 11:41:43,Mecânica,Correia,3,Rompimento ou desalinhamento da correia
+14,FIA-004,2024-01-31 05:24:32,Mecânica,Acoplamento,4,Folga ou desalinhamento do acoplamento
+15,TIN-007,2024-02-01 07:48:07,Mecânica,Acoplamento,1,Folga ou desalinhamento do acoplamento
+16,TEC-020,2024-02-01 21:35:02,Mecânica,Redutor,3,Ruído e aquecimento anormal no redutor
+17,ACA-008,2024-02-02 20:34:16,Elétrica,Inversor,4,Alarme no inversor de frequência
+18,ACA-008,2024-02-03 19:32:25,Automação,Encoder,2,Perda de referência do encoder
+19,TEC-016,2024-02-04 04:55:33,Pneumática,Válvula,2,Válvula pneumática sem resposta
+20,ACA-006,2024-02-04 05:50:12,Mecânica,Correia,3,Rompimento ou desalinhamento da correia
+21,TIN-001,2024-02-05 04:15:47,Elétrica,Motor,3,Sobrecorrente no motor elétrico
+22,FIA-008,2024-02-05 05:19:32,Operacional,Alimentação de material,5,Interrupção na alimentação de material
+23,TIN-005,2024-02-05 06:38:27,Mecânica,Eixo,1,Vibração elevada no conjunto do eixo
+24,ACA-004,2024-02-05 16:10:15,Operacional,Ajuste de processo,4,Parâmetro operacional fora da faixa
+25,FIA-009,2024-02-05 21:29:10,Mecânica,Redutor,3,Ruído e aquecimento anormal no redutor
+26,TEC-020,2024-02-06 09:58:58,Operacional,Setup,3,Falha durante ajuste ou troca de artigo
+27,TIN-009,2024-02-07 09:32:01,Elétrica,Inversor,5,Alarme no inversor de frequência
+28,FIA-009,2024-02-09 07:21:03,Mecânica,Redutor,4,Ruído e aquecimento anormal no redutor
+29,ACA-012,2024-02-09 07:57:18,Mecânica,Eixo,2,Vibração elevada no conjunto do eixo
+30,TEC-015,2024-02-12 08:02:38,Mecânica,Redutor,1,Ruído e aquecimento anormal no redutor
+31,FIA-005,2024-02-16 12:51:35,Mecânica,Redutor,3,Ruído e aquecimento anormal no redutor
+32,ACA-014,2024-02-17 05:52:03,Operacional,Alimentação de material,2,Interrupção na alimentação de material
+33,FIA-010,2024-02-18 01:24:33,Elétrica,Cabo,5,Mau contato em cabo de potência
+34,TIN-008,2024-02-19 21:18:45,Elétrica,Cabo,3,Mau contato em cabo de potência
+35,TIN-006,2024-02-23 03:17:05,Elétrica,Motor,3,Sobrecorrente no motor elétrico
+36,TEC-007,2024-02-23 10:21:46,Hidráulica,Mangueira hidráulica,2,Vazamento no circuito hidráulico
+37,ACA-008,2024-02-26 08:05:13,Elétrica,Inversor,3,Alarme no inversor de frequência
+38,ACA-001,2024-02-26 08:18:06,Mecânica,Eixo,5,Vibração elevada no conjunto do eixo
+39,ACA-015,2024-02-26 21:40:43,Elétrica,Cabo,1,Mau contato em cabo de potência
+40,ACA-004,2024-02-27 10:48:36,Elétrica,Inversor,3,Alarme no inversor de frequência
+41,FIA-010,2024-02-28 06:08:47,Elétrica,Motor,2,Sobrecorrente no motor elétrico
+42,FIA-011,2024-02-28 07:18:38,Mecânica,Redutor,2,Ruído e aquecimento anormal no redutor
+43,TIN-009,2024-02-29 00:40:37,Elétrica,Contator,1,Falha de acionamento do contator
+44,TIN-007,2024-03-01 21:59:53,Elétrica,Cabo,1,Mau contato em cabo de potência
+45,ACA-005,2024-03-03 14:48:29,Automação,Sensor,1,Leitura instável do sensor
+46,TEC-009,2024-03-04 09:14:08,Elétrica,Motor,2,Sobrecorrente no motor elétrico
+47,TIN-005,2024-03-06 04:53:38,Automação,CLP,4,Falha de comunicação com o CLP
+48,TEC-020,2024-03-06 23:42:50,Hidráulica,Bomba hidráulica,1,Baixa pressão no circuito hidráulico
+49,ACA-002,2024-03-09 09:12:34,Mecânica,Redutor,3,Ruído e aquecimento anormal no redutor
+50,FIA-014,2024-03-10 09:15:07,Automação,Sensor,1,Leitura instável do sensor
