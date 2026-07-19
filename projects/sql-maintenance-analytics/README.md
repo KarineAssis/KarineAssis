@@ -18,43 +18,40 @@ A análise reuniu informações de quatro setores produtivos — **Fiação, Tec
 
 A base representa dois anos de operação, entre janeiro de 2024 e dezembro de 2025.
 
-| Base analisada | Quantidade |
-|---|---:|
-| Setores produtivos | 4 |
-| Máquinas cadastradas | 60 |
-| Eventos de falha | 720 |
-| Ordens de manutenção | 1.500 |
-| Eventos de parada | 600 |
-| Registros de manutenção preventiva | 1.400 |
-| Registros de produção diária | 43.860 |
-| **Total de registros** | **48.144** |
+- **4** setores produtivos;
+- **60** máquinas cadastradas;
+- **720** eventos de falha;
+- **1.500** ordens de manutenção;
+- **600** eventos de parada;
+- **1.400** registros de manutenção preventiva;
+- **43.860** registros de produção diária;
+- **48.144 registros no total**.
 
 Os dados são **sintéticos** e não representam uma empresa real. A base foi gerada programaticamente para fins educacionais, respeitando relações coerentes entre máquinas, falhas, ordens, paradas, preventivas e produção.
 
 ## Estrutura do banco
 
-O banco `textile_maintenance` foi criado no PostgreSQL com sete tabelas principais, organizadas no schema `maintenance`:
+O banco `textile_maintenance` foi criado no PostgreSQL e organizado no schema `maintenance`.
 
-| Tabela | Finalidade |
-|---|---|
-| `sectors` | Cadastro dos setores produtivos |
-| `machines` | Cadastro das máquinas |
-| `failure_events` | Histórico de falhas |
-| `maintenance_orders` | Ordens preventivas, corretivas e preditivas |
-| `downtime_events` | Paradas planejadas e não planejadas |
-| `preventive_maintenance` | Planejamento e execução das preventivas |
-| `production_daily` | Produção, horas operacionais e refugo |
+- `sectors` — cadastro dos setores produtivos;
+- `machines` — cadastro das máquinas;
+- `failure_events` — histórico de falhas;
+- `maintenance_orders` — ordens preventivas, corretivas e preditivas;
+- `downtime_events` — paradas planejadas e não planejadas;
+- `preventive_maintenance` — planejamento e execução das preventivas;
+- `production_daily` — produção, horas operacionais e refugo.
 
-```mermaid
-erDiagram
-    SECTORS ||--o{ MACHINES : possui
-    MACHINES ||--o{ FAILURE_EVENTS : apresenta
-    MACHINES ||--o{ MAINTENANCE_ORDERS : recebe
-    MACHINES ||--o{ DOWNTIME_EVENTS : registra
-    MACHINES ||--o{ PREVENTIVE_MAINTENANCE : possui
-    MACHINES ||--o{ PRODUCTION_DAILY : produz
-    FAILURE_EVENTS o|--o{ MAINTENANCE_ORDERS : pode_gerar
-    FAILURE_EVENTS o|--o{ DOWNTIME_EVENTS : pode_causar
+### Relacionamentos principais
+
+```text
+sectors (1) ────< machines
+machines (1) ────< failure_events
+machines (1) ────< maintenance_orders
+machines (1) ────< downtime_events
+machines (1) ────< preventive_maintenance
+machines (1) ────< production_daily
+failure_events (1) ────< maintenance_orders
+failure_events (1) ────< downtime_events
 ```
 
 ## Construção técnica
@@ -103,85 +100,41 @@ ORDER BY
     total_failures DESC;
 ```
 
-### Evidência da execução no pgAdmin
+## Resultados executados no pgAdmin
 
-A consulta foi executada diretamente no PostgreSQL por meio do pgAdmin. A captura registra o código selecionado e o resultado retornado pelo banco.
+Os valores e os nomes das colunas apresentados abaixo foram extraídos das consultas executadas no PostgreSQL por meio do pgAdmin. A visualização reproduz o padrão do painel **Data Output**, enquanto os scripts originais permanecem disponíveis na pasta [`sql`](sql/).
 
 <div align="center">
-  <img src="assets/pgadmin-failures-by-sector.svg" alt="Consulta de falhas por setor executada no pgAdmin" width="100%">
+  <img src="assets/pgadmin-query-results.svg" alt="Resultados das consultas SQL do Case 03 no padrão Data Output do pgAdmin" width="100%">
 </div>
 
-As tabelas a seguir apresentam uma síntese editorial dos resultados, enquanto a captura acima documenta a execução real da consulta.
-
-## Principais resultados
+## Principais conclusões
 
 ### Falhas por setor
 
-| Setor | Total de falhas |
-|---|---:|
-| Tecelagem | 244 |
-| Acabamento | 179 |
-| Fiação | 169 |
-| Tingimento | 128 |
-
-A Tecelagem apresentou o maior volume absoluto de falhas. O resultado deve ser interpretado em conjunto com o número de máquinas, pois esse também é o setor com mais equipamentos na base.
+A **Tecelagem** apresentou 244 falhas, seguida por Acabamento, com 179; Fiação, com 169; e Tingimento, com 128. O resultado representa volume absoluto e deve ser interpretado em conjunto com a quantidade de máquinas de cada setor.
 
 ### Categorias mais frequentes
 
-| Categoria | Total de falhas |
-|---|---:|
-| Mecânica | 270 |
-| Elétrica | 192 |
-| Automação | 105 |
-| Operacional | 57 |
-| Pneumática | 54 |
-| Hidráulica | 42 |
-
-Falhas mecânicas e elétricas concentraram a maior parte das ocorrências.
+As falhas **mecânicas** foram as mais frequentes, com 270 ocorrências, seguidas pelas falhas elétricas, com 192. Automação registrou 105 ocorrências, enquanto as categorias operacional, pneumática e hidráulica apresentaram volumes menores.
 
 ### Máquinas com mais falhas
 
-| Máquina | Equipamento | Setor | Falhas |
-|---|---|---|---:|
-| TEC-020 | Urdideira 20 | Tecelagem | 33 |
-| ACA-005 | Rama 05 | Acabamento | 23 |
-| FIA-008 | Filatório 08 | Fiação | 22 |
-| TIN-004 | Jet de Tingimento 04 | Tingimento | 21 |
-| TEC-012 | Engomadeira 12 | Tecelagem | 21 |
+A máquina `TEC-020` — Urdideira 20 — apresentou 33 falhas e se destacou como candidata prioritária para investigação de causas recorrentes e revisão do plano preventivo.
 
-A `TEC-020` se destacou como candidata prioritária para investigação de causas recorrentes e revisão do plano preventivo.
+Na sequência apareceram `ACA-005`, com 23 falhas; `FIA-008`, com 22; e `TIN-004` e `TEC-012`, ambas com 21 ocorrências.
 
 ### Custos por tipo de manutenção
 
-| Tipo | Ordens | Custo total |
-|---|---:|---:|
-| Corretiva | 720 | R$ 2.247.229,42 |
-| Preventiva | 630 | R$ 1.150.353,05 |
-| Preditiva | 150 | R$ 196.554,06 |
-
-A manutenção corretiva apresentou o maior volume de ordens e o maior custo acumulado.
+A manutenção **corretiva** apresentou o maior volume e o maior custo acumulado: 720 ordens e R$ 2.247.229,42. A preventiva totalizou 630 ordens e R$ 1.150.353,05, enquanto a preditiva registrou 150 ordens e R$ 196.554,06.
 
 ### Situação das preventivas
 
-| Status | Quantidade |
-|---|---:|
-| No prazo | 1.137 |
-| Atrasada | 145 |
-| Pendente | 95 |
-| Cancelada | 23 |
-
-A maior parte das atividades foi executada no prazo. Entretanto, **263 preventivas** estavam atrasadas, pendentes ou canceladas.
+Foram registradas 1.137 preventivas realizadas no prazo. Entretanto, 145 estavam atrasadas, 95 pendentes e 23 canceladas, totalizando **263 atividades fora da condição esperada**.
 
 ### Produção e refugo
 
-| Setor | Produção | Refugo |
-|---|---:|---:|
-| Tecelagem | 8.198.767,95 | 165.450,17 |
-| Fiação | 7.779.000,12 | 128.812,09 |
-| Acabamento | 6.743.209,19 | 98.396,79 |
-| Tingimento | 3.886.889,79 | 91.919,71 |
-
-A Tecelagem apresentou a maior produção e também o maior volume absoluto de refugo.
+A Tecelagem apresentou a maior produção acumulada, com 8.198.767,95, e também o maior volume absoluto de refugo, com 165.450,17. Para uma avaliação mais precisa, o refugo deve ser analisado proporcionalmente ao volume produzido por setor.
 
 ## Recomendações
 
