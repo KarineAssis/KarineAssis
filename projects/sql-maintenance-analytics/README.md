@@ -10,9 +10,9 @@
 
 Uma indústria têxtil fictícia precisava organizar seus dados de manutenção e identificar onde estavam concentradas as principais falhas, os maiores custos e as oportunidades de melhoria no plano preventivo.
 
-A análise reuniu informações de quatro setores produtivos — **Fiação, Tecelagem, Tingimento e Acabamento** — em um banco relacional no PostgreSQL.
+A análise reuniu informações de quatro setores produtivos — **Fiação, Tecelagem, Tingimento e Acabamento** — em um banco de dados relacional no PostgreSQL.
 
-> **Pergunta central:** Como os dados de máquinas, falhas, ordens de manutenção, paradas, preventivas e produção apoiam a priorização das ações de manutenção?
+> **Pergunta central:** Como os dados de máquinas, falhas, ordens de manutenção, paradas, preventivas e produção podem apoiar a priorização das ações de manutenção?
 
 ## Escopo dos dados
 
@@ -31,7 +31,7 @@ Os dados são **sintéticos** e não representam uma empresa real. A base foi ge
 
 ## Estrutura do banco
 
-O banco `textile_maintenance` foi criado no PostgreSQL e organizado no schema `maintenance`.
+O banco `textile_maintenance` foi criado no PostgreSQL e organizado no esquema `maintenance`.
 
 - `sectors` — cadastro dos setores produtivos;
 - `machines` — cadastro das máquinas;
@@ -41,7 +41,7 @@ O banco `textile_maintenance` foi criado no PostgreSQL e organizado no schema `m
 - `preventive_maintenance` — planejamento e execução das preventivas;
 - `production_daily` — produção, horas operacionais e refugo.
 
-### Relacionamentos principais
+### Relacionamentos entre as tabelas
 
 ```text
 sectors (1) ────< machines
@@ -60,7 +60,7 @@ O projeto foi desenvolvido em cinco etapas:
 
 1. organização dos arquivos CSV;
 2. criação do banco e das tabelas no PostgreSQL;
-3. importação dos dados pelo pgAdmin;
+3. importação dos dados por meio do pgAdmin;
 4. validação das quantidades e dos relacionamentos;
 5. desenvolvimento das consultas de análise.
 
@@ -102,23 +102,23 @@ ORDER BY
 
 ## Principais resultados
 
-Os resultados abaixo foram obtidos a partir das consultas executadas no PostgreSQL por meio do pgAdmin. Os scripts originais permanecem disponíveis na pasta [`sql`](sql/).
+Os resultados abaixo foram obtidos a partir das consultas executadas no PostgreSQL por meio do pgAdmin. Os scripts SQL originais permanecem disponíveis na pasta [`sql`](sql/).
 
 ### Falhas por setor
 
 <div align="center">
-  <img src="assets/pgadmin-failures-by-sector-real.png" alt="Resultado da consulta de falhas por setor no pgAdmin" width="333">
+  <img src="assets/pgadmin-failures-by-sector-full.jpg" alt="Resultado completo da consulta de falhas por setor no pgAdmin" width="504">
 </div>
 
 A **Tecelagem** apresentou o maior volume absoluto de falhas. O resultado deve ser interpretado em conjunto com a quantidade de máquinas, pois esse também é o setor com mais equipamentos na base.
 
-### Categorias mais frequentes
+### Categorias de falha mais frequentes
 
 <div align="center">
   <img src="assets/pgadmin-failure-categories-real.svg" alt="Resultado da consulta de categorias de falha no pgAdmin" width="282">
 </div>
 
-Falhas mecânicas e elétricas concentraram a maior parte das ocorrências.
+As falhas mecânicas e elétricas concentraram a maior parte das ocorrências.
 
 ### Máquinas com mais falhas
 
@@ -126,7 +126,7 @@ Falhas mecânicas e elétricas concentraram a maior parte das ocorrências.
   <img src="assets/pgadmin-top-machines-real.svg" alt="Resultado da consulta de máquinas com mais falhas no pgAdmin" width="846">
 </div>
 
-A `TEC-020` se destacou como candidata prioritária para investigação de causas recorrentes e revisão do plano preventivo.
+A `TEC-020` destacou-se como candidata prioritária para a investigação de causas recorrentes e a revisão do plano preventivo.
 
 ### Custos por tipo de manutenção
 
@@ -154,17 +154,17 @@ A Tecelagem apresentou a maior produção acumulada e também o maior volume abs
 
 ## Recomendações
 
-- priorizar a investigação da Urdideira `TEC-020` e das demais máquinas com alta recorrência;
-- aprofundar as causas das falhas mecânicas e elétricas;
-- acompanhar o custo das ordens corretivas e os equipamentos que mais contribuem para esse valor;
-- atuar sobre preventivas atrasadas e pendentes;
-- avaliar o refugo proporcionalmente ao volume produzido por setor.
+- Priorizar a investigação da Urdideira `TEC-020` e das demais máquinas com alta recorrência de falhas.
+- Aprofundar a análise das causas das falhas mecânicas e elétricas.
+- Acompanhar o custo das ordens corretivas e os equipamentos que mais contribuem para esse valor.
+- Atuar sobre as preventivas atrasadas e pendentes.
+- Avaliar o refugo proporcionalmente ao volume produzido por setor.
 
 ## Arquivos do projeto
 
 ### Scripts SQL
 
-1. [`01_create_tables.sql`](sql/01_create_tables.sql) — criação do schema, tabelas, restrições e índices;
+1. [`01_create_tables.sql`](sql/01_create_tables.sql) — criação do esquema, das tabelas, das restrições e dos índices;
 2. [`02_validate_data.sql`](sql/02_validate_data.sql) — validação das quantidades importadas;
 3. [`03_machine_sector_join.sql`](sql/03_machine_sector_join.sql) — relacionamento entre máquinas e setores;
 4. [`04_basic_analysis.sql`](sql/04_basic_analysis.sql) — análises iniciais do cadastro de máquinas;
@@ -178,15 +178,15 @@ A Tecelagem apresentou a maior produção acumulada e também o maior volume abs
 ### Dados
 
 - [`data/README.md`](data/README.md) — documentação da base e dos volumes utilizados;
-- [`01_sectors.csv`](data/01_sectors.csv) — cadastro completo de setores;
-- [`02_machines.csv`](data/02_machines.csv) — cadastro completo de máquinas;
+- [`01_sectors.csv`](data/01_sectors.csv) — cadastro completo dos setores;
+- [`02_machines.csv`](data/02_machines.csv) — cadastro completo das máquinas;
 - [`data/samples`](data/samples/) — amostras das tabelas de maior volume.
 
 Os resultados apresentados foram calculados sobre a base completa importada no PostgreSQL. As amostras publicadas permitem visualizar a estrutura dos dados sem tornar o repositório excessivamente pesado.
 
 ## Limitações e próximos passos
 
-Nesta versão, o projeto não calcula indicadores como MTTR, MTBF e disponibilidade. Essas métricas poderão ser incorporadas em uma evolução futura, junto com análises mensais, dashboard em Power BI e dados de sensores para manutenção preditiva.
+Nesta versão, o projeto não calcula indicadores como MTTR, MTBF e disponibilidade. Essas métricas poderão ser incorporadas em uma evolução futura, junto com análises mensais, um dashboard em Power BI e dados de sensores para manutenção preditiva.
 
 ## Tecnologias
 
