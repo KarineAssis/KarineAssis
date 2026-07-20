@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="760" viewBox="0 0 1400 760" role="img" aria-labelledby="title desc">
+  <title id="title">Operational Cost Reduction</title>
+  <desc id="desc">Prévia executiva de um case real de Business Analytics e melhoria contínua com redução de custos operacionais.</desc>
+  <defs>
+    <style>
+      .t1{font:700 42px Arial,Helvetica,sans-serif;fill:#fff}.t2{font:400 20px Arial,Helvetica,sans-serif;fill:#d7e0e6}.tag{font:700 14px Arial,Helvetica,sans-serif;fill:#fff}.label{font:700 14px Arial,Helvetica,sans-serif;fill:#687784}.value{font:700 34px Arial,Helvetica,sans-serif;fill:#24323d}.section{font:700 19px Arial,Helvetica,sans-serif;fill:#24323d}.body{font:400 15px Arial,Helvetica,sans-serif;fill:#24323d}.flow{font:700 13px Arial,Helvetica,sans-serif;fill:#0b2233}
+    </style>
+  </defs>
+  <rect width="1400" height="760" rx="22" fill="#f5f7fa"/>
+  <rect width="1400" height="118" rx="22" fill="#0b2233"/>
+  <rect y="96" width="1400" height="22" fill="#0b2233"/>
+  <text x="58" y="56" class="t1">Operational Cost Reduction</text>
+  <text x="58" y="88" class="t2">Business Analytics aplicado à redução de custos e à performance operacional</text>
+  <rect x="1082" y="34" width="260" height="42" rx="18" fill="#18384d" stroke="#35566b"/>
+  <text x="1110" y="60" class="tag">CASE 04 | BUSINESS ANALYTICS</text>
+
+  <g>
+    <rect x="48" y="144" width="306" height="112" rx="16" fill="#fff" stroke="#dce3e8"/>
+    <rect x="48" y="144" width="8" height="112" rx="4" fill="#3e6b89"/>
+    <text x="76" y="177" class="label">ECONOMIA MENSAL</text><text x="76" y="224" class="value">R$ 45,4 mil</text>
+  </g>
+  <g>
+    <rect x="374" y="144" width="306" height="112" rx="16" fill="#fff" stroke="#dce3e8"/>
+    <rect x="374" y="144" width="8" height="112" rx="4" fill="#3e6b89"/>
+    <text x="402" y="177" class="label">ECONOMIA EM 3 MESES</text><text x="402" y="224" class="value">R$ 136,2 mil</text>
+  </g>
+  <g>
+    <rect x="700" y="144" width="306" height="112" rx="16" fill="#fff" stroke="#dce3e8"/>
+    <rect x="700" y="144" width="8" height="112" rx="4" fill="#c9853f"/>
+    <text x="728" y="177" class="label">REDUÇÃO DE CUSTOS</text><text x="728" y="224" class="value">59%</text>
+  </g>
+  <g>
+    <rect x="1026" y="144" width="326" height="112" rx="16" fill="#fff" stroke="#dce3e8"/>
+    <rect x="1026" y="144" width="8" height="112" rx="4" fill="#0b2233"/>
+    <text x="1054" y="177" class="label">REDUÇÃO DE PARADAS</text><text x="1054" y="224" class="value">86%</text>
+  </g>
+
+  <rect x="48" y="286" width="820" height="220" rx="16" fill="#fff" stroke="#dce3e8"/>
+  <text x="74" y="324" class="section">Pergunta de negócio</text>
+  <text x="74" y="358" class="body">Como reduzir um dos maiores componentes de custo da operação</text>
+  <text x="74" y="384" class="body">sem comprometer disponibilidade, qualidade e continuidade?</text>
+  <rect x="74" y="430" width="126" height="38" rx="19" fill="#eaf0f4"/><text x="99" y="454" class="flow">CUSTOS</text>
+  <rect x="214" y="430" width="136" height="38" rx="19" fill="#eaf0f4"/><text x="239" y="454" class="flow">DADOS TOTVS</text>
+  <rect x="364" y="430" width="118" height="38" rx="19" fill="#eaf0f4"/><text x="393" y="454" class="flow">PARETO</text>
+  <rect x="496" y="430" width="154" height="38" rx="19" fill="#eaf0f4"/><text x="520" y="454" class="flow">CAUSA-RAIZ</text>
+  <rect x="664" y="430" width="178" height="38" rx="19" fill="#eaf0f4"/><text x="690" y="454" class="flow">PLANO DE AÇÃO</text>
+
+  <rect x="892" y="286" width="460" height="220" rx="16" fill="#fff" stroke="#dce3e8"/>
+  <text x="918" y="324" class="section">Impacto e execução</text>
+  <text x="918" y="360" class="body">• Linha de base e análise dos direcionadores</text>
+  <text x="918" y="390" class="body">• Priorização pelo impacto no negócio</text>
+  <text x="918" y="420" class="body">• Ações de baixo investimento</text>
+  <text x="918" y="450" class="body">• Integração entre áreas e fornecedores</text>
+  <text x="918" y="480" class="body">• 1º lugar entre mais de 80 projetos</text>
+
+  <rect x="48" y="536" width="1304" height="170" rx="16" fill="#eaf0f4" stroke="#c7d6e0"/>
+  <text x="74" y="574" class="section">Narrativa do case</text>
+  <text x="74" y="612" class="body">Dados de custo → análise de drivers → causas prioritárias → decisões → implementação →</text>
+  <text x="74" y="640" class="body">ganhos financeiros mensuráveis e padronização dos resultados.</text>
+</svg>
