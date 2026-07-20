@@ -1,19 +1,20 @@
 <div align="center">
-  <img src="assets/profile-banner.svg" alt="Karine de Assis - Data Analytics, Power BI, Business Analytics and Data Storytelling" width="100%">
+  <img src="assets/profile-banner.svg" alt="Karine de Assis - Data Analytics, Power BI, SQL, Business Analytics and Data Storytelling" width="100%">
 </div>
 
 <br>
 
-Profissional de **Data Analytics** com mais de 10 anos de experiência transformando dados operacionais em indicadores, análises de desempenho e recomendações para apoiar decisões em ambientes complexos.
+Engenheira mecânica e profissional de **Data Analytics** com mais de 10 anos de experiência transformando dados operacionais em indicadores, análises de desempenho e recomendações para apoiar decisões em ambientes complexos.
 
-Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KPIs, visualização de dados e conhecimento de negócio**. Atuo na tradução de perguntas operacionais em métricas, dashboards, diagnósticos e recomendações acionáveis, conectando áreas de negócio, liderança e tecnologia.
+Minha trajetória combina **pensamento analítico, conhecimento de negócio e experiência prática com Power BI, Excel, Power Query, DAX, SQL, PostgreSQL e pgAdmin**. Atuo na tradução de perguntas operacionais em métricas, consultas, dashboards, diagnósticos e recomendações acionáveis, conectando negócio, processos e tecnologia.
 
-*Data Analytics professional with 10+ years of experience turning operational data into performance indicators, business insights and actionable recommendations.*
+*Mechanical engineer and Data Analytics professional with 10+ years of experience turning operational data into performance indicators, business insights and actionable recommendations.*
 
 ## Competências em Data Analytics
 
 - Análise de dados e Business Analytics
 - Power BI, Excel, Power Query e DAX
+- SQL, PostgreSQL e pgAdmin
 - Definição, governança e análise de KPIs
 - Visualização de dados e Data Storytelling
 - Análise de desempenho, tendências, desvios e causas
@@ -97,23 +98,29 @@ Experiência em mapeamento de processos, requisitos funcionais, testes, pilotos,
 
 ### Aplicação prática
 
-`Power BI` · `Excel` · `Power Query` · `DAX` · `KPIs` · `Data Visualization` · `Data Storytelling` · `Business Analytics` · `Análise de Processos` · `Requisitos Funcionais`
+`Power BI` · `Excel` · `Power Query` · `DAX` · `SQL` · `PostgreSQL` · `pgAdmin` · `KPIs` · `Data Visualization` · `Data Storytelling` · `Business Analytics` · `Análise de Processos` · `Requisitos Funcionais`
 
 ### Em desenvolvimento
 
-`SQL` · `Python` · `Microsoft Fabric` · `Data Science`
+`Python` · `Microsoft Fabric` · `Data Science`
 
 ### IA aplicada à produtividade analítica
 
 `ChatGPT` · `Claude` · `Microsoft Copilot`
 
-Uso para exploração de hipóteses, síntese de informações, documentação, estruturação de análises e comunicação executiva.
+Formação introdutória em IA aplicada aos negócios, IA Conversacional e IA Generativa, com uso prático para exploração de hipóteses, síntese de informações, documentação, estruturação de análises e comunicação executiva.
+
+## Formação complementar recente
+
+- **Introduction to SQL** — DataCamp, 2026
+- **Introduction to Conversational AI** — LinkedIn Learning, 2026
+- **Jornada Inteligência Artificial** — Hashtag Treinamentos, 8h, 2026
 
 ## Formação e idiomas
 
-- Engenharia Mecânica - UFRN
-- MBA em Gestão da Manutenção - IPOG
-- Programa Profissional em Data Science - em andamento
+- Engenharia Mecânica — UFRN
+- MBA em Gestão da Manutenção — IPOG
+- Programa Profissional em Data Science — em andamento
 - Português nativo
 - Inglês C1
 - Espanhol C1
@@ -121,5 +128,5 @@ Uso para exploração de hipóteses, síntese de informações, documentação, 
 
 ## Contato
 
-- [LinkedIn](https://www.linkedin.com/in/karine-dos-anjos-176ab4127/)
+- [LinkedIn](https://www.linkedin.com/in/karine-de-assis-176ab4127/)
 - [GitHub](https://github.com/KarineAssis)
