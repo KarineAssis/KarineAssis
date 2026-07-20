@@ -100,41 +100,77 @@ ORDER BY
     total_failures DESC;
 ```
 
-## Resultados executados no pgAdmin
+## Principais resultados
 
-Os valores e os nomes das colunas apresentados abaixo foram extraídos das consultas executadas no PostgreSQL por meio do pgAdmin. A visualização reproduz o padrão do painel **Data Output**, enquanto os scripts originais permanecem disponíveis na pasta [`sql`](sql/).
-
-<div align="center">
-  <img src="assets/pgadmin-query-results.svg" alt="Resultados das consultas SQL do Case 03 no padrão Data Output do pgAdmin" width="100%">
-</div>
-
-## Principais conclusões
+Os resultados abaixo foram obtidos a partir das consultas executadas no PostgreSQL por meio do pgAdmin. Os scripts originais permanecem disponíveis na pasta [`sql`](sql/).
 
 ### Falhas por setor
 
-A **Tecelagem** apresentou 244 falhas, seguida por Acabamento, com 179; Fiação, com 169; e Tingimento, com 128. O resultado representa volume absoluto e deve ser interpretado em conjunto com a quantidade de máquinas de cada setor.
+| Setor | Total de falhas |
+|---|---:|
+| Tecelagem | 244 |
+| Acabamento | 179 |
+| Fiação | 169 |
+| Tingimento | 128 |
+
+A **Tecelagem** apresentou o maior volume absoluto de falhas. O resultado deve ser interpretado em conjunto com a quantidade de máquinas, pois esse também é o setor com mais equipamentos na base.
 
 ### Categorias mais frequentes
 
-As falhas **mecânicas** foram as mais frequentes, com 270 ocorrências, seguidas pelas falhas elétricas, com 192. Automação registrou 105 ocorrências, enquanto as categorias operacional, pneumática e hidráulica apresentaram volumes menores.
+| Categoria | Total de falhas |
+|---|---:|
+| Mecânica | 270 |
+| Elétrica | 192 |
+| Automação | 105 |
+| Operacional | 57 |
+| Pneumática | 54 |
+| Hidráulica | 42 |
+
+Falhas mecânicas e elétricas concentraram a maior parte das ocorrências.
 
 ### Máquinas com mais falhas
 
-A máquina `TEC-020` — Urdideira 20 — apresentou 33 falhas e se destacou como candidata prioritária para investigação de causas recorrentes e revisão do plano preventivo.
+| Máquina | Equipamento | Setor | Falhas |
+|---|---|---|---:|
+| TEC-020 | Urdideira 20 | Tecelagem | 33 |
+| ACA-005 | Rama 05 | Acabamento | 23 |
+| FIA-008 | Filatório 08 | Fiação | 22 |
+| TIN-004 | Jet de Tingimento 04 | Tingimento | 21 |
+| TEC-012 | Engomadeira 12 | Tecelagem | 21 |
 
-Na sequência apareceram `ACA-005`, com 23 falhas; `FIA-008`, com 22; e `TIN-004` e `TEC-012`, ambas com 21 ocorrências.
+A `TEC-020` se destacou como candidata prioritária para investigação de causas recorrentes e revisão do plano preventivo.
 
 ### Custos por tipo de manutenção
 
-A manutenção **corretiva** apresentou o maior volume e o maior custo acumulado: 720 ordens e R$ 2.247.229,42. A preventiva totalizou 630 ordens e R$ 1.150.353,05, enquanto a preditiva registrou 150 ordens e R$ 196.554,06.
+| Tipo | Ordens | Custo total |
+|---|---:|---:|
+| Corretiva | 720 | R$ 2.247.229,42 |
+| Preventiva | 630 | R$ 1.150.353,05 |
+| Preditiva | 150 | R$ 196.554,06 |
+
+A manutenção corretiva apresentou o maior volume de ordens e o maior custo acumulado.
 
 ### Situação das preventivas
 
-Foram registradas 1.137 preventivas realizadas no prazo. Entretanto, 145 estavam atrasadas, 95 pendentes e 23 canceladas, totalizando **263 atividades fora da condição esperada**.
+| Status | Quantidade |
+|---|---:|
+| No prazo | 1.137 |
+| Atrasada | 145 |
+| Pendente | 95 |
+| Cancelada | 23 |
+
+A maior parte das atividades foi executada no prazo. Entretanto, 263 preventivas estavam atrasadas, pendentes ou canceladas.
 
 ### Produção e refugo
 
-A Tecelagem apresentou a maior produção acumulada, com 8.198.767,95, e também o maior volume absoluto de refugo, com 165.450,17. Para uma avaliação mais precisa, o refugo deve ser analisado proporcionalmente ao volume produzido por setor.
+| Setor | Produção | Refugo |
+|---|---:|---:|
+| Tecelagem | 8.198.767,95 | 165.450,17 |
+| Fiação | 7.779.000,12 | 128.812,09 |
+| Acabamento | 6.743.209,19 | 98.396,79 |
+| Tingimento | 3.886.889,79 | 91.919,71 |
+
+A Tecelagem apresentou a maior produção acumulada e também o maior volume absoluto de refugo. Para uma avaliação mais precisa, o refugo deve ser analisado proporcionalmente ao volume produzido por setor.
 
 ## Recomendações
 
