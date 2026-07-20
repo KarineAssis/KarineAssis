@@ -73,7 +73,7 @@ Case real de Business Analytics e melhoria contínua que transformou análise de
   <img src="https://raw.githubusercontent.com/KarineAssis/sim-mobile-case-study/main/assets/project-cover.svg" alt="SIM Mobile - Transformação digital na captura de dados operacionais" width="100%">
 </a>
 
-Case de transformação digital em manutenção industrial, aproximando o registro das atividades do local de execução.
+Case real de transformação digital em manutenção industrial, aproximando o registro das atividades do local de execução.
 
 **Minha atuação:** diagnóstico do processo, requisitos funcionais, testes, piloto, implantação e acompanhamento da adoção.  
 **5+ fluxos mobile · 148 usuários habilitados · 3 unidades · início em 2021**
