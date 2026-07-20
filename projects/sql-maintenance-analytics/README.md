@@ -106,12 +106,9 @@ Os resultados abaixo foram obtidos a partir das consultas executadas no PostgreS
 
 ### Falhas por setor
 
-| Setor | Total de falhas |
-|---|---:|
-| Tecelagem | 244 |
-| Acabamento | 179 |
-| Fiação | 169 |
-| Tingimento | 128 |
+<div align="center">
+  <img src="assets/pgadmin-failures-by-sector-real.svg" alt="Resultado da consulta de falhas por setor no pgAdmin" width="333">
+</div>
 
 A **Tecelagem** apresentou o maior volume absoluto de falhas. O resultado deve ser interpretado em conjunto com a quantidade de máquinas, pois esse também é o setor com mais equipamentos na base.
 
