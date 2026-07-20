@@ -30,7 +30,7 @@ Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KP
 ### [SQL Maintenance Analytics](projects/sql-maintenance-analytics/README.md)
 
 <a href="projects/sql-maintenance-analytics/README.md">
-  <img src="assets/sql-maintenance-analytics-preview.svg" alt="SQL Maintenance Analytics" width="100%">
+  <img src="https://raw.githubusercontent.com/KarineAssis/KarineAssis/main/assets/sql-maintenance-analytics-preview.svg?v=20260720-2" alt="SQL Maintenance Analytics" width="100%">
 </a>
 
 Case em PostgreSQL que organiza dados de manutenção de uma indústria têxtil fictícia e analisa falhas, custos, preventivas e produção.
