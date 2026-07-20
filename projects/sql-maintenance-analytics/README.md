@@ -114,58 +114,41 @@ A **Tecelagem** apresentou o maior volume absoluto de falhas. O resultado deve s
 
 ### Categorias mais frequentes
 
-| Categoria | Total de falhas |
-|---|---:|
-| Mecânica | 270 |
-| Elétrica | 192 |
-| Automação | 105 |
-| Operacional | 57 |
-| Pneumática | 54 |
-| Hidráulica | 42 |
+<div align="center">
+  <img src="assets/pgadmin-failure-categories-real.svg" alt="Resultado da consulta de categorias de falha no pgAdmin" width="282">
+</div>
 
 Falhas mecânicas e elétricas concentraram a maior parte das ocorrências.
 
 ### Máquinas com mais falhas
 
-| Máquina | Equipamento | Setor | Falhas |
-|---|---|---|---:|
-| TEC-020 | Urdideira 20 | Tecelagem | 33 |
-| ACA-005 | Rama 05 | Acabamento | 23 |
-| FIA-008 | Filatório 08 | Fiação | 22 |
-| TIN-004 | Jet de Tingimento 04 | Tingimento | 21 |
-| TEC-012 | Engomadeira 12 | Tecelagem | 21 |
+<div align="center">
+  <img src="assets/pgadmin-top-machines-real.svg" alt="Resultado da consulta de máquinas com mais falhas no pgAdmin" width="846">
+</div>
 
 A `TEC-020` se destacou como candidata prioritária para investigação de causas recorrentes e revisão do plano preventivo.
 
 ### Custos por tipo de manutenção
 
-| Tipo | Ordens | Custo total |
-|---|---:|---:|
-| Corretiva | 720 | R$ 2.247.229,42 |
-| Preventiva | 630 | R$ 1.150.353,05 |
-| Preditiva | 150 | R$ 196.554,06 |
+<div align="center">
+  <img src="assets/pgadmin-maintenance-costs-real.svg" alt="Resultado da consulta de custos por tipo de manutenção no pgAdmin" width="484">
+</div>
 
 A manutenção corretiva apresentou o maior volume de ordens e o maior custo acumulado.
 
 ### Situação das preventivas
 
-| Status | Quantidade |
-|---|---:|
-| No prazo | 1.137 |
-| Atrasada | 145 |
-| Pendente | 95 |
-| Cancelada | 23 |
+<div align="center">
+  <img src="assets/pgadmin-preventive-status-real.svg" alt="Resultado da consulta de situação das preventivas no pgAdmin" width="395">
+</div>
 
 A maior parte das atividades foi executada no prazo. Entretanto, 263 preventivas estavam atrasadas, pendentes ou canceladas.
 
 ### Produção e refugo
 
-| Setor | Produção | Refugo |
-|---|---:|---:|
-| Tecelagem | 8.198.767,95 | 165.450,17 |
-| Fiação | 7.779.000,12 | 128.812,09 |
-| Acabamento | 6.743.209,19 | 98.396,79 |
-| Tingimento | 3.886.889,79 | 91.919,71 |
+<div align="center">
+  <img src="assets/pgadmin-production-scrap-real.svg" alt="Resultado da consulta de produção e refugo no pgAdmin" width="436">
+</div>
 
 A Tecelagem apresentou a maior produção acumulada e também o maior volume absoluto de refugo. Para uma avaliação mais precisa, o refugo deve ser analisado proporcionalmente ao volume produzido por setor.
 
