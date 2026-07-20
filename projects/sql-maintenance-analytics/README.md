@@ -3,7 +3,7 @@
 **Case 03 — SQL aplicado à análise de manutenção industrial**
 
 <div align="center">
-  <img src="../../assets/sql-maintenance-analytics-preview.svg" alt="SQL Maintenance Analytics" width="100%">
+  <img src="https://raw.githubusercontent.com/KarineAssis/KarineAssis/main/assets/sql-maintenance-analytics-preview.svg?v=20260720-2" alt="SQL Maintenance Analytics" width="100%">
 </div>
 
 ## O problema
@@ -12,7 +12,7 @@ Uma indústria têxtil fictícia precisava organizar seus dados de manutenção 
 
 A análise reuniu informações de quatro setores produtivos — **Fiação, Tecelagem, Tingimento e Acabamento** — em um banco de dados relacional no PostgreSQL.
 
-> **Pergunta central:** Como os dados de máquinas, falhas, ordens de manutenção, paradas, preventivas e produção podem apoiar a priorização das ações de manutenção?
+> **Pergunta central:** Como os dados de máquinas, falhas, ordens de manutenção, paradas, preventivas e produção apoiam a priorização das ações de manutenção?
 
 ## Escopo dos dados
 
@@ -107,7 +107,7 @@ Os resultados abaixo foram obtidos a partir das consultas executadas no PostgreS
 ### Falhas por setor
 
 <div align="center">
-  <img src="assets/pgadmin-failures-by-sector-full.jpg" alt="Resultado completo da consulta de falhas por setor no pgAdmin" width="504">
+  <img src="https://raw.githubusercontent.com/KarineAssis/KarineAssis/main/projects/sql-maintenance-analytics/assets/pgadmin-failures-by-sector-full.jpg?v=20260720-2" alt="Resultado completo da consulta de falhas por setor no pgAdmin" width="504">
 </div>
 
 A **Tecelagem** apresentou o maior volume absoluto de falhas. O resultado deve ser interpretado em conjunto com a quantidade de máquinas, pois esse também é o setor com mais equipamentos na base.
