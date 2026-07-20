@@ -28,18 +28,18 @@ Minha trajetória combina **pensamento analítico, conhecimento de negócio e ex
 
 ## Projetos selecionados
 
-### [Operational Cost Reduction](projects/operational-cost-reduction/README.md)
+### [Logistics Customer Experience Analytics](projects/customer-experience-performance-analytics/README.md)
 
-<a href="projects/operational-cost-reduction/README.md">
-  <img src="assets/operational-cost-reduction-preview.svg?v=20260720-1" alt="Operational Cost Reduction" width="100%">
+<a href="projects/customer-experience-performance-analytics/README.md">
+  <img src="assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
 </a>
 
-Case real de Business Analytics e melhoria contínua que transformou análise de custos e causas em ganho financeiro mensurável.
+Case em Power BI que conecta desempenho de entregas, motivos de contato e satisfação do cliente.
 
-**Business Analytics · Cost Analysis · MASP/PDCA · Root Cause Analysis**  
-**R$ 45,4 mil de economia mensal · R$ 136,2 mil em 3 meses · 59% menos custos · 86% menos paradas**
+**Power Query · Modelo dimensional · DAX · Data Visualization**  
+**53.770 entregas · 87,02% de cumprimento · 12,98% de atraso · 64,02% de satisfação**
 
-[Ver o case](projects/operational-cost-reduction/README.md)
+[Ver o case](projects/customer-experience-performance-analytics/README.md) · [Ver a implementação técnica](projects/customer-experience-performance-analytics/docs/technical-implementation.md)
 
 ### [SQL Maintenance Analytics](projects/sql-maintenance-analytics/README.md)
 
@@ -54,18 +54,18 @@ Case em PostgreSQL que organiza dados de manutenção de uma indústria têxtil 
 
 [Ver o case](projects/sql-maintenance-analytics/README.md) · [Ver as consultas principais](projects/sql-maintenance-analytics/sql/10_project_summary.sql)
 
-### [Logistics Customer Experience Analytics](projects/customer-experience-performance-analytics/README.md)
+### [Operational Cost Reduction](projects/operational-cost-reduction/README.md)
 
-<a href="projects/customer-experience-performance-analytics/README.md">
-  <img src="assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
+<a href="projects/operational-cost-reduction/README.md">
+  <img src="assets/operational-cost-reduction-preview.svg?v=20260720-1" alt="Operational Cost Reduction" width="100%">
 </a>
 
-Case em Power BI que conecta desempenho de entregas, motivos de contato e satisfação do cliente.
+Case real de Business Analytics e melhoria contínua que transformou análise de custos e causas em ganho financeiro mensurável.
 
-**Power Query · Modelo dimensional · DAX · Data Visualization**  
-**53.770 entregas · 87,02% de cumprimento · 12,98% de atraso · 64,02% de satisfação**
+**Business Analytics · Cost Analysis · MASP/PDCA · Root Cause Analysis**  
+**R$ 45,4 mil de economia mensal · R$ 136,2 mil em 3 meses · 59% menos custos · 86% menos paradas**
 
-[Ver o case](projects/customer-experience-performance-analytics/README.md) · [Ver a implementação técnica](projects/customer-experience-performance-analytics/docs/technical-implementation.md)
+[Ver o case](projects/operational-cost-reduction/README.md)
 
 ### [SIM Mobile — Transformação Digital na Captura de Dados Operacionais](https://github.com/KarineAssis/sim-mobile-case-study)
 
