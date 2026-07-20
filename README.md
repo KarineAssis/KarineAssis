@@ -27,6 +27,19 @@ Minha trajetória combina **Power BI, Excel, Power Query, DAX, governança de KP
 
 ## Projetos selecionados
 
+### [Operational Cost Reduction](projects/operational-cost-reduction/README.md)
+
+<a href="projects/operational-cost-reduction/README.md">
+  <img src="assets/operational-cost-reduction-preview.svg?v=20260720-1" alt="Operational Cost Reduction" width="100%">
+</a>
+
+Case real de Business Analytics e melhoria contínua que transformou análise de custos e causas em ganho financeiro mensurável.
+
+**Business Analytics · Cost Analysis · MASP/PDCA · Root Cause Analysis**  
+**R$ 45,4 mil de economia mensal · R$ 136,2 mil em 3 meses · 59% menos custos · 86% menos paradas**
+
+[Ver o case](projects/operational-cost-reduction/README.md)
+
 ### [SQL Maintenance Analytics](projects/sql-maintenance-analytics/README.md)
 
 <a href="projects/sql-maintenance-analytics/README.md">
