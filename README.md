@@ -1,32 +1,42 @@
 <div align="center">
-  <img src="assets/profile-banner.svg" alt="Karine de Assis - Data Analytics, Power BI, SQL, Business Analytics and Data Storytelling" width="100%">
+  <img src="assets/profile-banner.svg" alt="Karine de Assis - Data Analytics, Business Analytics, Power BI, SQL and Digital Transformation" width="100%">
 </div>
 
 <br>
 
-Engenheira mecânica e profissional de **Data Analytics** com mais de 10 anos de experiência transformando dados operacionais em indicadores, análises de desempenho e recomendações para apoiar decisões em ambientes complexos.
+Engenheira mecânica com mais de **10 anos de experiência em operações, manutenção e gestão**, utilizando dados, indicadores e análises para apoiar decisões, padronizar processos e gerar resultados de negócio.
 
-Minha trajetória combina **pensamento analítico, conhecimento de negócio e experiência prática com Power BI, Excel, Power Query, DAX, SQL, PostgreSQL e pgAdmin**. Atuo na tradução de perguntas operacionais em métricas, consultas, dashboards, diagnósticos e recomendações acionáveis, conectando negócio, processos e tecnologia.
+Minha trajetória combina **pensamento analítico, conhecimento operacional e experiência prática com Power BI, Excel, Power Query, DAX, SQL, PostgreSQL e pgAdmin**. Atuo na tradução de perguntas de negócio em métricas, consultas, dashboards, diagnósticos e recomendações acionáveis, conectando dados, processos, pessoas e tecnologia.
 
-*Mechanical engineer and Data Analytics professional with 10+ years of experience turning operational data into performance indicators, business insights and actionable recommendations.*
+Entre abril de 2024 e novembro de 2025, residi na Alemanha, concluí estudos de alemão até o nível A2 e aprofundei minha transição para Data Analytics por meio do Programa Profissional em Data Science e de formações complementares em SQL, Python e Inteligência Artificial. Desde o retorno ao Brasil, sigo desenvolvendo projetos de portfólio que demonstram a aplicação prática desses conhecimentos.
 
-## Competências em Data Analytics
+*Mechanical engineer with 10+ years of experience in operations, maintenance and management, using data, performance indicators and business analysis to support decisions and measurable improvements.*
 
-- Análise de dados e Business Analytics
+## Áreas de atuação
+
+### Data Analytics e Business Intelligence
+
 - Power BI, Excel, Power Query e DAX
 - SQL, PostgreSQL e pgAdmin
-- Definição, governança e análise de KPIs
+- Modelagem, definição e governança de KPIs
 - Visualização de dados e Data Storytelling
 - Análise de desempenho, tendências, desvios e causas
+- Qualidade, validação e padronização de informações
+
+### Business Analytics e Transformação Digital
+
 - Tradução de necessidades de negócio em métricas e requisitos
-- Qualidade de dados e padronização de informações
+- Análise e melhoria de processos
+- Requisitos funcionais e testes
+- Implantação e gestão da mudança
 - Gestão de stakeholders e comunicação executiva
+- Melhoria contínua e análise de causas
 
 ## Como estruturo uma análise
 
-**Pergunta de negócio → entendimento dos dados → tratamento e validação → modelagem e métricas → visualização → insights → recomendação → decisão**
+**Pergunta de negócio → entendimento dos dados e do processo → tratamento e validação → modelagem e métricas → visualização → insights → recomendação → decisão e acompanhamento**
 
-## Projetos selecionados
+## Projetos de Data Analytics
 
 ### [Logistics Customer Experience Analytics](projects/customer-experience-performance-analytics/README.md)
 
@@ -34,12 +44,12 @@ Minha trajetória combina **pensamento analítico, conhecimento de negócio e ex
   <img src="assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
 </a>
 
-Case em Power BI que conecta desempenho de entregas, motivos de contato e satisfação do cliente.
+Projeto em Power BI que conecta desempenho de entregas, motivos de contato e satisfação do cliente.
 
 **Power Query · Modelo dimensional · DAX · Data Visualization**  
-**53.770 entregas · 87,02% de cumprimento · 12,98% de atraso · 64,02% de satisfação**
+**53.770 entregas · 16.318 interações · 12,98% de atraso · 64,02% de satisfação**
 
-[Ver o case](projects/customer-experience-performance-analytics/README.md) · [Ver a implementação técnica](projects/customer-experience-performance-analytics/docs/technical-implementation.md)
+[Ver o projeto](projects/customer-experience-performance-analytics/README.md) · [Ver a implementação técnica](projects/customer-experience-performance-analytics/docs/technical-implementation.md)
 
 ### [SQL Maintenance Analytics](projects/sql-maintenance-analytics/README.md)
 
@@ -47,12 +57,14 @@ Case em Power BI que conecta desempenho de entregas, motivos de contato e satisf
   <img src="https://raw.githubusercontent.com/KarineAssis/KarineAssis/main/assets/sql-maintenance-analytics-preview.svg?v=20260720-2" alt="SQL Maintenance Analytics" width="100%">
 </a>
 
-Case em PostgreSQL que organiza dados de manutenção de uma indústria têxtil fictícia e analisa falhas, custos, preventivas e produção.
+Projeto em PostgreSQL que organiza dados de manutenção de uma indústria têxtil fictícia e analisa falhas, custos, preventivas e produção.
 
 **SQL · PostgreSQL · Banco relacional · JOINs e agregações**  
 **48.144 registros · 60 máquinas · 720 falhas · 1.500 ordens de manutenção**
 
-[Ver o case](projects/sql-maintenance-analytics/README.md) · [Ver as consultas principais](projects/sql-maintenance-analytics/sql/10_project_summary.sql)
+[Ver o projeto](projects/sql-maintenance-analytics/README.md) · [Ver as consultas principais](projects/sql-maintenance-analytics/sql/10_project_summary.sql)
+
+## Projetos de Business Analytics e Transformação
 
 ### [Operational Cost Reduction](projects/operational-cost-reduction/README.md)
 
@@ -60,12 +72,12 @@ Case em PostgreSQL que organiza dados de manutenção de uma indústria têxtil 
   <img src="assets/operational-cost-reduction-preview.svg?v=20260720-1" alt="Operational Cost Reduction" width="100%">
 </a>
 
-Case real de Business Analytics e melhoria contínua que transformou análise de custos e causas em ganho financeiro mensurável.
+Caso real de Business Analytics e melhoria contínua que transformou análise de custos e causas em ganho financeiro mensurável.
 
 **Business Analytics · Cost Analysis · MASP/PDCA · Root Cause Analysis**  
 **R$ 45,4 mil de economia mensal · R$ 136,2 mil em 3 meses · 59% menos custos · 86% menos paradas**
 
-[Ver o case](projects/operational-cost-reduction/README.md)
+[Ver o projeto](projects/operational-cost-reduction/README.md)
 
 ### [SIM Mobile — Transformação Digital na Captura de Dados Operacionais](https://github.com/KarineAssis/sim-mobile-case-study)
 
@@ -73,9 +85,9 @@ Case real de Business Analytics e melhoria contínua que transformou análise de
   <img src="https://raw.githubusercontent.com/KarineAssis/sim-mobile-case-study/main/assets/project-cover.svg" alt="SIM Mobile - Transformação digital na captura de dados operacionais" width="100%">
 </a>
 
-Case real de transformação digital em manutenção industrial, aproximando o registro das atividades do local de execução.
+Caso real de transformação digital em manutenção industrial, aproximando o registro das atividades do local de execução.
 
-**Minha atuação:** diagnóstico do processo, requisitos funcionais, testes, piloto, implantação e acompanhamento da adoção.  
+**Minha atuação:** diagnóstico do processo, requisitos funcionais, alinhamento com TI, testes, piloto, implantação e acompanhamento da adoção.  
 **5+ fluxos mobile · 148 usuários habilitados · 3 unidades · início em 2021**
 
 [Ver o repositório do projeto](https://github.com/KarineAssis/sim-mobile-case-study)
@@ -98,7 +110,7 @@ Experiência em mapeamento de processos, requisitos funcionais, testes, pilotos,
 
 ### Aplicação prática
 
-`Power BI` · `Excel` · `Power Query` · `DAX` · `SQL` · `PostgreSQL` · `pgAdmin` · `KPIs` · `Data Visualization` · `Data Storytelling` · `Business Analytics` · `Análise de Processos` · `Requisitos Funcionais`
+`Power BI` · `Excel` · `Power Query` · `DAX` · `SQL` · `PostgreSQL` · `pgAdmin` · `KPIs` · `Data Modeling` · `Data Visualization` · `Data Storytelling` · `Business Analytics` · `Análise de Processos` · `Requisitos Funcionais`
 
 ### Em desenvolvimento
 
@@ -115,12 +127,12 @@ Formação introdutória em IA aplicada aos negócios, IA Conversacional e IA Ge
 - **Introduction to SQL** — DataCamp, 2026
 - **Introduction to Conversational AI** — LinkedIn Learning, 2026
 - **Jornada Inteligência Artificial** — Hashtag Treinamentos, 8h, 2026
+- **Programa Profissional em Data Science** — em andamento
 
 ## Formação e idiomas
 
 - Engenharia Mecânica — UFRN
 - MBA em Gestão da Manutenção — IPOG
-- Programa Profissional em Data Science — em andamento
 - Português nativo
 - Inglês C1
 - Espanhol C1
