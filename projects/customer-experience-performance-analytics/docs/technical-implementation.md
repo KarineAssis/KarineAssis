@@ -196,12 +196,33 @@ A leitura do dashboard segue esta ordem:
 Visão geral → evolução dos atrasos → motivos de contato → impacto na satisfação
 ```
 
-## 6. Arquivos do projeto
+## 6. Rastreabilidade entre dados e decisão
+
+| Etapa | Evidência disponível |
+|---|---|
+| Fonte | arquivos Excel e CSV descritos no mapeamento |
+| Tratamento | regras e exemplos em Power Query |
+| Modelo | duas tabelas fato, dimensões e relacionamentos documentados |
+| Métricas | medidas DAX e regras de cálculo |
+| Visualização | dashboard executivo e modelo de dados |
+| Interpretação | principais resultados e limitações |
+| Recomendação | ações direcionadas aos atrasos e à comunicação com clientes |
+
+Essa estrutura permite acompanhar como uma pergunta de negócio foi transformada em dados tratados, métricas, visualizações e recomendações.
+
+## 7. Entregáveis
 
 | Entregável | Finalidade | Status |
 |---|---|---|
-| Arquivo `.pbix` | abertura direta no Power BI Desktop | será publicado após a revisão final |
-| Projeto `.pbip` | estrutura do relatório e do modelo semântico | preparado para publicação |
-| Imagens/PDF | visualização do dashboard sem Power BI Desktop | em preparação |
-| Dicionário de dados | explicar o significado de cada campo, seu tipo e sua regra de uso | será adicionado ao repositório |
-| Documentação técnica | registrar as etapas de construção da solução | disponível neste repositório |
+| Arquivo `.pbix` | abertura e análise no Power BI Desktop | disponível no repositório |
+| PDF do dashboard | visualização sem necessidade do Power BI Desktop | disponível no repositório |
+| Documentação técnica | registrar as etapas de construção da solução | disponível |
+| Modelo e regras dos indicadores | explicar relacionamentos, medidas e critérios | disponível |
+| Dicionário de dados | detalhar campos, tipos e regras de uso | evolução futura |
+| Projeto `.pbip` | versionamento granular do modelo e do relatório | não publicado nesta versão |
+
+## 8. Limitações e próximos passos
+
+- Os dados são sintéticos e não representam uma empresa real.
+- A relação entre atraso e satisfação indica associação, não causalidade.
+- Uma evolução futura pode incluir dicionário de dados completo, testes automatizados de qualidade e publicação controlada em Power BI Service.
