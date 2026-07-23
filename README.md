@@ -8,7 +8,7 @@ Engenheira mecânica com mais de **10 anos de experiência em operações, manut
 
 Minha trajetória combina **pensamento analítico, conhecimento operacional e experiência prática com Power BI, Excel, Power Query, DAX, SQL, PostgreSQL e pgAdmin**. Atuo na tradução de perguntas de negócio em métricas, consultas, dashboards, diagnósticos e recomendações acionáveis, conectando dados, processos, pessoas e tecnologia.
 
-Entre abril de 2024 e novembro de 2025, residi na Alemanha, concluí estudos de alemão até o nível A2 e aprofundei minha transição para Data Analytics por meio do Programa Profissional em Data Science e de formações complementares em SQL, Python e Inteligência Artificial. Desde o retorno ao Brasil, sigo desenvolvendo projetos de portfólio que demonstram a aplicação prática desses conhecimentos.
+Entre abril de 2024 e novembro de 2025, residi na Alemanha, onde concluí estudos de alemão até o nível A2 e aprofundei minha transição para Data Analytics por meio do Programa Profissional em Data Science e de formações complementares em SQL, Python e Inteligência Artificial. Desde meu retorno ao Brasil, sigo desenvolvendo projetos de portfólio que demonstram a aplicação prática desses conhecimentos.
 
 *Mechanical engineer with 10+ years of experience in operations, maintenance and management, using data, performance indicators and business analysis to support decisions and measurable improvements.*
 
