@@ -1,6 +1,6 @@
 # SQL Maintenance Analytics
 
-**Case 03 — SQL aplicado à análise de manutenção industrial**
+**SQL aplicado à análise de manutenção industrial**
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/KarineAssis/KarineAssis/main/assets/sql-maintenance-analytics-preview.svg?v=20260720-2" alt="SQL Maintenance Analytics" width="100%">
@@ -160,6 +160,14 @@ A Tecelagem apresentou a maior produção acumulada e também o maior volume abs
 - Atuar sobre as preventivas atrasadas e pendentes.
 - Avaliar o refugo proporcionalmente ao volume produzido por setor.
 
+## Rastreabilidade
+
+- **Estrutura:** scripts de criação do esquema, tabelas, restrições e índices;
+- **Validação:** consultas de conferência das quantidades importadas;
+- **Análise:** scripts separados por tema de negócio;
+- **Evidência:** resultados apresentados a partir das consultas executadas no PostgreSQL;
+- **Interpretação:** conclusões e recomendações associadas a cada análise.
+
 ## Arquivos do projeto
 
 ### Scripts SQL
@@ -186,7 +194,7 @@ Os resultados apresentados foram calculados sobre a base completa importada no P
 
 ## Limitações e próximos passos
 
-Nesta versão, o projeto não calcula indicadores como MTTR, MTBF e disponibilidade. Essas métricas poderão ser incorporadas em uma evolução futura, junto com análises mensais, um dashboard em Power BI e dados de sensores para manutenção preditiva.
+Nesta versão, o projeto demonstra os fundamentos de SQL utilizados até o momento e não busca se apresentar como um projeto avançado. Indicadores como MTTR, MTBF e disponibilidade, análises temporais e recursos intermediários serão incorporados após a evolução da formação em SQL.
 
 ## Tecnologias
 
