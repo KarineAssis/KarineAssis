@@ -1,6 +1,6 @@
 # Logistics Customer Experience Analytics
 
-**Case 02 — Power BI aplicado ao desempenho logístico e à experiência do cliente**
+**Power BI aplicado ao desempenho logístico e à experiência do cliente**
 
 <div align="center">
   <img src="../../assets/customer-experience-performance-preview.svg" alt="Logistics Customer Experience Analytics" width="100%">
@@ -80,11 +80,24 @@ CALCULATE(
 )
 ```
 
+## Entregáveis disponíveis
+
+- relatório final em Power BI (`.pbix`);
+- versão executiva do dashboard em PDF;
+- documentação do problema, metodologia, modelo, indicadores e implementação técnica;
+- exemplos das principais medidas DAX e etapas de tratamento no Power Query.
+
 ## Documentação técnica
 
 - [Problema de negócio e metodologia](docs/business-problem-and-methodology.md)
 - [Modelo e indicadores](docs/model-metrics-and-rules.md)
 - [Implementação técnica](docs/technical-implementation.md)
+
+## Rastreabilidade da análise
+
+**Fonte → tratamento → modelo → métrica → visual → interpretação → recomendação**
+
+As regras de transformação e cálculo estão documentadas para permitir que o avaliador relacione cada resultado apresentado no dashboard às etapas de preparação e modelagem dos dados.
 
 ## Limitações
 
